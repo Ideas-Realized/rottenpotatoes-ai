@@ -17,13 +17,14 @@ import {
 } from "@/components/ui/select";
 import { films, FORMATS, GENRES, TOOLS, type Format } from "@/data/films";
 
-type SearchParams = { format?: string; q?: string };
+type SearchParams = { format?: string | undefined; q?: string | undefined };
 
 export const Route = createFileRoute("/discover")({
   validateSearch: (search: Record<string, unknown>): SearchParams => ({
-    format: typeof search.format === "string" ? search.format : undefined,
-    q: typeof search.q === "string" ? search.q : undefined,
+    format: typeof search["format"] === "string" ? search["format"] : undefined,
+    q: typeof search["q"] === "string" ? search["q"] : undefined,
   }),
+
   head: () => ({
     meta: [
       { title: "Discover AI Films — Rotten Potatoes" },
