@@ -152,17 +152,26 @@ export function SiteFooter() {
           <h2 className="font-mono text-xs uppercase tracking-[0.18em] text-gold">Explore</h2>
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
             <li>
-              <Link to="/discover" className="inline-flex min-h-11 items-center hover:text-foreground sm:min-h-0">
+              <Link
+                to="/discover"
+                className="inline-flex min-h-11 items-center hover:text-foreground sm:min-h-0"
+              >
                 Discover
               </Link>
             </li>
             <li>
-              <Link to="/reviews" className="inline-flex min-h-11 items-center hover:text-foreground sm:min-h-0">
+              <Link
+                to="/reviews"
+                className="inline-flex min-h-11 items-center hover:text-foreground sm:min-h-0"
+              >
                 Reviews
               </Link>
             </li>
             <li>
-              <Link to="/about" className="inline-flex min-h-11 items-center hover:text-foreground sm:min-h-0">
+              <Link
+                to="/about"
+                className="inline-flex min-h-11 items-center hover:text-foreground sm:min-h-0"
+              >
                 Methodology
               </Link>
             </li>
@@ -172,17 +181,26 @@ export function SiteFooter() {
           <h2 className="font-mono text-xs uppercase tracking-[0.18em] text-gold">Creators</h2>
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
             <li>
-              <Link to="/submit" className="inline-flex min-h-11 items-center hover:text-foreground sm:min-h-0">
+              <Link
+                to="/submit"
+                className="inline-flex min-h-11 items-center hover:text-foreground sm:min-h-0"
+              >
                 Submit a Film
               </Link>
             </li>
             <li>
-              <Link to="/about" className="inline-flex min-h-11 items-center hover:text-foreground sm:min-h-0">
+              <Link
+                to="/about"
+                className="inline-flex min-h-11 items-center hover:text-foreground sm:min-h-0"
+              >
                 Disclosure Policy
               </Link>
             </li>
             <li>
-              <Link to="/about" className="inline-flex min-h-11 items-center hover:text-foreground sm:min-h-0">
+              <Link
+                to="/about"
+                className="inline-flex min-h-11 items-center hover:text-foreground sm:min-h-0"
+              >
                 Code of Conduct
               </Link>
             </li>

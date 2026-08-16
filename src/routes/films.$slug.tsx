@@ -138,9 +138,21 @@ function FilmDetail() {
                   Kernel Notes
                 </h2>
                 <ScoreMeter label="Story" value={film.kernelNotes.story} headingLevel="h3" />
-                <ScoreMeter label="Visual Craft" value={film.kernelNotes.visualCraft} headingLevel="h3" />
-                <ScoreMeter label="Originality" value={film.kernelNotes.originality} headingLevel="h3" />
-                <ScoreMeter label="AI Execution" value={film.kernelNotes.aiExecution} headingLevel="h3" />
+                <ScoreMeter
+                  label="Visual Craft"
+                  value={film.kernelNotes.visualCraft}
+                  headingLevel="h3"
+                />
+                <ScoreMeter
+                  label="Originality"
+                  value={film.kernelNotes.originality}
+                  headingLevel="h3"
+                />
+                <ScoreMeter
+                  label="AI Execution"
+                  value={film.kernelNotes.aiExecution}
+                  headingLevel="h3"
+                />
               </div>
 
               <div className="rounded-lg border border-border/70 bg-card p-6">
