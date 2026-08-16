@@ -8,22 +8,24 @@ import { ScoreMeter, SpudScore } from "@/components/SpudScore";
 import { Button } from "@/components/ui/button";
 import { categories, editorials, films } from "@/data/films";
 
+const TITLE = "Rotten Potatoes — AI cinema has entered the chat";
+const DESCRIPTION =
+  "A fictional demo review destination for AI-generated short films, trailers and experiments. Sample Spud Scores, curators and toolchains are invented.";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Rotten Potatoes — AI cinema has entered the chat" },
-      {
-        name: "description",
-        content:
-          "Discover AI-generated short films, fake trailers, music videos and experiments. Curated Spud Scores, honest reviews and the toolchain behind every piece.",
-      },
-      { property: "og:title", content: "Rotten Potatoes — AI cinema has entered the chat" },
-      {
-        property: "og:description",
-        content:
-          "A fictional review destination for AI-generated video: Spud Scores, Kernel Notes and the tools behind each film.",
-      },
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:url", content: `${SITE_URL}/` },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: TITLE },
+      { name: "twitter:description", content: DESCRIPTION },
     ],
+    links: [{ rel: "canonical", href: `${SITE_URL}/` }],
   }),
   component: Home,
 });
