@@ -470,7 +470,7 @@ export const reviews: Review[] = [
     fresh: true,
     headline: "The first generated short that made me forget the pipeline",
     pullQuote: "It smells like a kitchen. I cannot explain how.",
-    body: "Fennimore's fictional short does something almost no generated work manages: it stays still. There are maybe eleven cuts in fourteen minutes, and each one lands like a decision rather than a workaround. The archive's dream sequences flirt with incoherence and then pull back at exactly the right moment.",
+    body: "Eleven cuts in fourteen minutes. I counted twice, because the restraint is so unusual in this fictional field that I assumed I had missed some. Fennimore's archive-dream passages flirt with incoherence around minute six and then pull back one beat before they lose you, which is a writing decision, not a rendering one. What stays with me is the plating: Wren sets down a bowl for a ration number that stopped scanning six years ago, and the camera does not move, and nobody says anything about it. Ninety-five, and my only hesitation is that the final title card slightly over-explains a film that had already landed.",
     date: "2026-07-30",
   },
   {
@@ -480,8 +480,8 @@ export const reviews: Review[] = [
     score: 92,
     fresh: true,
     headline: "A masterclass in humid, ugly, beautiful light",
-    pullQuote: "Every highlight is dirty on purpose.",
-    body: "The grade is the performance here. Steam diffuses the practical sources into a soft amber wash, and the deliberate grain hides exactly the artifacts that would otherwise break the spell.",
+    pullQuote: "Every highlight in this film is dirty on purpose.",
+    body: "The grade is the performance. Steam diffuses the practical-looking sources into a soft amber wash that sits about a stop under where a nervous filmmaker would have put it, and the retained grain hides precisely the artifacts that would otherwise break the spell around the hands. Minute nine is the frame of the year for me: hatch light, one silhouette, no motion. Ninety-two, docked from a ninety-six purely because the two exterior shots have a plastic quality the interiors never do.",
     date: "2026-07-31",
   },
   {
@@ -491,8 +491,8 @@ export const reviews: Review[] = [
     score: 88,
     fresh: true,
     headline: "Genre pastiche with a knife in its pocket",
-    pullQuote: "The repeating alley is the best joke of the year.",
-    body: "Osei-Tutu leans into artifice until it becomes theme. The voice work is stiff, but the stiffness reads as character rather than limitation, which is a needle almost nobody threads.",
+    pullQuote: "The repeating alley is the best structural joke of the year.",
+    body: "Osei-Tutu leans into artifice until artifice becomes theme. The synthetic line delivery is stiff and the stiffness reads as a man who suspects he was written, a needle almost nobody in this fictional field threads. The rain glitch is load-bearing. Eighty-eight, and I would happily have gone into the nineties if the detective did not spend the last ninety seconds narrating the concept back to me.",
     date: "2026-06-14",
   },
   {
@@ -502,8 +502,8 @@ export const reviews: Review[] = [
     score: 81,
     fresh: true,
     headline: "Immaculate toolchain, slightly thin third act",
-    pullQuote: "The disclosure card is more transparent than most features.",
-    body: "A clean fictional pipeline, well documented and honestly credited. The film's collapse in the final ninety seconds is a writing issue, not a rendering one.",
+    pullQuote: "The disclosure card is more transparent than most features manage.",
+    body: "A clean fictional pipeline, credited shot-group by shot-group, with the voice model named and its limits acknowledged in the film itself. From a toolchain standpoint there is nothing to complain about. The collapse in the final ninety seconds is a script problem: no upscaler causes a monologue. Eighty-one.",
     date: "2026-06-16",
   },
   {
@@ -513,8 +513,8 @@ export const reviews: Review[] = [
     score: 94,
     fresh: true,
     headline: "One descending shot, zero mercy",
-    pullQuote: "I have not stopped hearing it.",
-    body: "Vantree treats the camera move as a metronome and lets the choir fall out of tune around it. The detuning is manual, which is the entire point.",
+    pullQuote: "Four minutes long, and I have not stopped hearing it.",
+    body: "Vantree treats the push-in as a metronome and lets the choir fall out of tune against it, arch by arch. The detuning is manual, take by take, which is the entire argument of the piece: the discomfort is authored. By the ninth arch the harmony sits a clean quarter-tone under comfortable and your jaw knows before your ear does. Ninety-four. The last arch introduces a light source the film has no time left to justify.",
     date: "2026-08-04",
   },
   {
@@ -523,9 +523,9 @@ export const reviews: Review[] = [
     reviewerId: "r-strand",
     score: 74,
     fresh: true,
-    headline: "A great mirror scene trapped in an explainer",
+    headline: "A great mirror scene trapped inside an explainer",
     pullQuote: "Trust the audience. Cut the last four minutes.",
-    body: "The escalation is genuinely upsetting until a voiceover arrives to describe what we already understood. The crowd loves it anyway, and honestly, fair.",
+    body: "The escalation from minute nine to minute fourteen is genuinely upsetting, and the vertical reframe makes the letterbox feel like a symptom rather than a format choice. Then a voiceover arrives to describe what the mirror already did, in sentences, twice. Seventy-four. The crowd has this at ninety-four and I understand why: the scare works even when the film does not.",
     date: "2025-11-24",
   },
   {
@@ -536,7 +536,7 @@ export const reviews: Review[] = [
     fresh: false,
     headline: "The Crowd Crop is doing a lot of work here",
     pullQuote: "Popular is not the same as finished.",
-    body: "Community enthusiasm for this fictional short outpaces the film by roughly twenty points. That gap is interesting, and it is why we publish both numbers.",
+    body: "Community enthusiasm for this fictional short outruns the film by eighteen points, the widest gap in our vault. That gap is not an error to be corrected, it is information: the mirror sequence is shareable and the third act is not. We publish both numbers so you can decide which one you are shopping for. Sixty-nine from me.",
     date: "2025-12-02",
   },
   {
@@ -547,7 +547,7 @@ export const reviews: Review[] = [
     fresh: true,
     headline: "Thirty-one minutes of a field forgetting itself",
     pullQuote: "Insufferable in the way important work often is.",
-    body: "Pang's fictional endurance piece will empty a room, and the people who stay will not shut up about it for a year. The eighth pass is the one that broke me.",
+    body: "Pang's fictional endurance piece will empty a room and the people who stay will not shut up about it for a year. Pass eight is the one that broke me: the horizon grows a second horizon, the wind keeps blowing through grain that is no longer there, and nothing on screen acknowledges the change. Eighty-four, with full marks for originality and an honest deduction for the three passes that are clearly runtime.",
     date: "2026-05-09",
   },
   {
@@ -557,8 +557,8 @@ export const reviews: Review[] = [
     score: 66,
     fresh: false,
     headline: "A perfect gag with a two-minute runtime problem",
-    pullQuote: "Great trailer. Shame about the other ninety seconds.",
-    body: "Gutshot's fictional fake sequel nails the grammar of a tentpole spot, then keeps going well past the punchline.",
+    pullQuote: "Great forty seconds. Shame about the other eighty.",
+    body: "Gutshot clone the grammar of a tentpole spot beat for beat, down to the invented composer sting and the fake critic quote, and for forty seconds it is the funniest thing in the vault. Then the punchline lands and the trailer keeps going, because nobody in this fictional collective could bear to cut a shot they had rendered. Sixty-six.",
     date: "2026-08-11",
   },
   {
@@ -568,8 +568,8 @@ export const reviews: Review[] = [
     score: 90,
     fresh: true,
     headline: "Disclosure as dramaturgy",
-    pullQuote: "The credits are part of the film. More of this.",
-    body: "Ellowin's invented oral history folds its own synthetic-performer credits into the narrative. It is the most useful thing anyone has done with a transparency card.",
+    pullQuote: "The credits block is part of the film. More of this, please.",
+    body: "Ellowin's invented oral history folds its synthetic-performer credits into the narrative, returns to them twice, and closes on them. It is the most useful thing anyone in this fictional field has done with a transparency card: not a legal footnote but a reveal. Craft marks lag the writing, particularly in the archival inserts, which look assembled rather than found. Ninety.",
     date: "2025-10-06",
   },
   {
@@ -579,8 +579,8 @@ export const reviews: Review[] = [
     score: 85,
     fresh: true,
     headline: "Two brothers, one funeral, no showing off",
-    pullQuote: "The most confident thing here is the silence.",
-    body: "Marchetti's fictional chamber piece holds mid-shots long enough for the writing to breathe, which remains the rarest choice in generated cinema.",
+    pullQuote: "The most confident thing in this film is a four-second silence.",
+    body: "Four setups, no inserts, and a script that lets a pause do the accusing. Marchetti holds his generated faces in mid-shot long enough for them to act, which remains the rarest choice in this fictional field, and the writing repays the risk. Eighty-five. Visual craft is merely competent, and the film knows it does not need more.",
     date: "2026-03-21",
   },
   {
@@ -590,8 +590,8 @@ export const reviews: Review[] = [
     score: 78,
     fresh: true,
     headline: "Vibes, dread, and one immaculate final frame",
-    pullQuote: "The middle sags. The ending does not.",
-    body: "Adeyemi builds a genuinely oppressive dark, then coasts for four minutes before delivering the year's best still image.",
+    pullQuote: "The middle sags. The last nineteen seconds do not.",
+    body: "Adeyemi builds an oppressive dark out of nothing but monitor glow, then spends four minutes in the middle of an eleven-minute film coasting on it. Stay anyway. The reveal is a single unmoving frame held for nineteen seconds and it is the best still image I logged this year. Seventy-eight, and the number is a compromise between the second act and the last shot.",
     date: "2026-08-15",
   },
   {
@@ -601,8 +601,8 @@ export const reviews: Review[] = [
     score: 71,
     fresh: true,
     headline: "A shrug, but a well-painted one",
-    pullQuote: "The seed declines. Respect.",
-    body: "Barnhardt's fictional short is slight on purpose and honest about it. The handmade artifacts are the whole appeal.",
+    pullQuote: "The seed declines to comment. Respect.",
+    body: "Barnhardt's fictional short is slight on purpose and never pretends otherwise. The handmade brush artifacts are the appeal, and the refusal to punch up the joke across five minutes is its own discipline. Seventy-one, which is a compliment at this length.",
     date: "2026-08-16",
   },
   {
@@ -613,10 +613,11 @@ export const reviews: Review[] = [
     fresh: false,
     headline: "Drift as method, drift as excuse",
     pullQuote: "Sometimes degradation is just degradation.",
-    body: "I admire the rigour of this fictional experiment and still think three of the eleven passes exist only to pad the runtime.",
+    body: "I admire the rigour of this fictional experiment: identical prompt, no corrections, eleven passes, all disclosed. I still think passes four, six and ten exist because eleven is a better number than eight. Sixty-two, and I expect to be outvoted by my own colleague.",
     date: "2026-05-12",
   },
 ];
+
 
 export type Editorial = {
   id: string;
