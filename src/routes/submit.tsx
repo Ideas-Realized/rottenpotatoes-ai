@@ -173,7 +173,7 @@ function Submit() {
           </p>
           <div className="grid gap-2 sm:grid-cols-2">
             {TOOLS.map((t) => (
-              <div key={t} className="flex items-center gap-2">
+              <div key={t} className="flex min-h-11 items-center gap-2 sm:min-h-0">
                 <Checkbox
                   id={`t-${t}`}
                   checked={tools.includes(t)}
@@ -212,7 +212,7 @@ function Submit() {
               Poster upload is disabled in this demo. We generate placeholder art for you.
             </p>
           </div>
-          <div className="flex items-start gap-3">
+          <div className="flex min-h-11 items-start gap-3 sm:min-h-0">
             <Checkbox
               id="disclose"
               checked={disclosed}

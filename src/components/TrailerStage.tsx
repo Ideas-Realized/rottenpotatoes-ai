@@ -120,7 +120,7 @@ export function TrailerStage({ film, className }: { film: Film; className?: stri
               if (elapsed >= total) setElapsed(0);
             }}
             aria-label={playing ? "Pause the illustrative sample" : "Play the illustrative sample"}
-            className="grid size-10 shrink-0 place-items-center rounded-sm border border-gold/50 bg-gold/10 text-gold transition-colors hover:bg-gold/20"
+            className="grid size-11 shrink-0 sm:size-10 place-items-center rounded-sm border border-gold/50 bg-gold/10 text-gold transition-colors hover:bg-gold/20"
           >
             {playing ? (
               <Pause className="size-4" aria-hidden="true" />

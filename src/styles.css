@@ -251,9 +251,39 @@
   }
 }
 
+/* Ensure keyboard focus stays high-contrast gold even on gold-filled controls */
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .marquee-track,
   .grain-layer {
     animation: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* suppress decorative transform/scale hover motion */
+  .group:hover,
+  a:hover,
+  button:hover,
+  article:hover {
+    transform: none !important;
   }
 }

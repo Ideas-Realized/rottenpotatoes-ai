@@ -73,7 +73,13 @@ function About() {
         </p>
         <div className="mt-8 space-y-6 rounded-lg border border-border/70 bg-card p-6">
           {weights.map((w) => (
-            <ScoreMeter key={w.label} label={w.label} value={w.value} hint={w.hint} />
+            <ScoreMeter
+              key={w.label}
+              label={w.label}
+              value={w.value}
+              hint={w.hint}
+              headingLevel="h3"
+            />
           ))}
         </div>
       </section>
