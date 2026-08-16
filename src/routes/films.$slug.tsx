@@ -1,11 +1,11 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { Clock, Play, Share2, Wrench } from "lucide-react";
+import { Clock, Share2, Star, Wrench } from "lucide-react";
 import { toast } from "sonner";
 
 import { FilmCard, SaveButton } from "@/components/FilmCard";
-import { PosterArt } from "@/components/PosterArt";
 import { ScoreMeter, SpudScore } from "@/components/SpudScore";
 import { ReviewCard } from "@/components/ReviewCard";
+import { TrailerStage } from "@/components/TrailerStage";
 import { Button } from "@/components/ui/button";
 import { getFilm, recommendations, reviewsForFilm, scoreTier } from "@/data/films";
 
@@ -54,30 +54,18 @@ function FilmDetail() {
           </nav>
 
           <div className="mt-6 grid gap-8 lg:grid-cols-[1.4fr_0.6fr]">
-            {/* player placeholder */}
+            {/* watch stage */}
             <div>
-              <div className="film-edge relative aspect-video overflow-hidden rounded-lg border border-gold/25 bg-surface shadow-[var(--shadow-frame)]">
-                <PosterArt film={film} className="absolute inset-0 size-full" compact />
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-                  <button
-                    type="button"
-                    onClick={() =>
-                      toast("Playback is a placeholder", {
-                        description: "No real video is hosted in this demo build.",
-                      })
-                    }
-                    className="flex size-16 items-center justify-center rounded-full border border-gold/70 bg-background/70 text-gold backdrop-blur transition-transform hover:scale-105"
-                    aria-label={`Play preview of ${film.title} (placeholder)`}
-                  >
-                    <Play className="size-7" aria-hidden="true" />
-                  </button>
-                  <p className="font-mono text-[0.6rem] uppercase tracking-[0.2em] text-muted-foreground">
-                    Player placeholder · no video hosted
-                  </p>
-                </div>
-              </div>
+              <TrailerStage film={film} />
 
-              <h1 className="mt-8 text-4xl leading-[0.9] sm:text-6xl">{film.title}</h1>
+              {film.editorsPick && (
+                <p className="mt-6 inline-flex items-center gap-1.5 rounded-sm border border-gold/40 bg-gold/10 px-2 py-1 font-mono text-[0.6rem] uppercase tracking-[0.16em] text-gold">
+                  <Star className="size-3" aria-hidden="true" /> Editor&apos;s pick
+                </p>
+              )}
+
+              <h1 className="mt-4 text-4xl leading-[0.9] sm:text-6xl">{film.title}</h1>
+
               <p className="mt-4 text-sm text-muted-foreground">
                 {film.creator} <span className="text-gold">{film.creatorHandle}</span> · {film.year}{" "}
                 · <Clock className="inline size-3.5" aria-hidden="true" /> {film.runtimeMin} min ·{" "}
@@ -85,6 +73,16 @@ function FilmDetail() {
               </p>
               <p className="mt-5 max-w-2xl text-lg text-foreground/90">{film.logline}</p>
               <p className="mt-4 max-w-2xl text-sm text-muted-foreground">{film.synopsis}</p>
+
+              <p className="mt-6 max-w-2xl border-l-2 border-gold pl-4 text-sm text-foreground/85">
+                <span className="font-mono text-[0.6rem] uppercase tracking-[0.18em] text-gold">
+                  Why we chose it —{" "}
+                </span>
+                {film.editorNote}
+              </p>
+              <p className="mt-3 font-mono text-[0.6rem] uppercase tracking-[0.16em] text-muted-foreground">
+                Key art generated in CSS · {film.artNote}
+              </p>
 
               <div className="mt-7 flex flex-wrap items-center gap-3">
                 <SaveButton film={film} className="h-9 px-3 text-sm" />

@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Bookmark, BookmarkCheck, Clock } from "lucide-react";
+import { Bookmark, BookmarkCheck, Clock, Star } from "lucide-react";
 import { toast } from "sonner";
 
 import { PosterArt } from "@/components/PosterArt";
@@ -27,16 +27,17 @@ export function SaveButton({ film, className }: { film: Film; className?: string
         });
       }}
       className={cn(
-        "inline-flex items-center gap-1.5 rounded-sm border border-border/80 bg-background/70 px-2 py-1 text-xs text-muted-foreground backdrop-blur transition-colors hover:border-gold/60 hover:text-gold",
+        "inline-flex min-h-9 items-center gap-1.5 rounded-sm border border-border/80 bg-background/70 px-2.5 py-1.5 text-xs text-muted-foreground backdrop-blur transition-colors hover:border-gold/60 hover:text-gold",
         saved && "border-gold/70 text-gold",
         className,
       )}
     >
-      {saved ? <BookmarkCheck className="size-3.5" /> : <Bookmark className="size-3.5" />}
+      {saved ? <BookmarkCheck className="size-4" /> : <Bookmark className="size-4" />}
       {saved ? "Saved" : "Save"}
     </button>
   );
 }
+
 
 export function FilmCard({ film, className }: { film: Film; className?: string }) {
   return (
@@ -66,8 +67,13 @@ export function FilmCard({ film, className }: { film: Film; className?: string }
         </span>
       )}
 
-      <div className="flex flex-1 flex-col gap-2 p-4">
-        <h3 className="text-lg leading-tight">
+      <div className="flex flex-1 flex-col gap-2 p-4 sm:p-5">
+        {film.editorsPick && (
+          <p className="inline-flex w-fit items-center gap-1.5 rounded-sm border border-gold/40 bg-gold/10 px-1.5 py-0.5 font-mono text-[0.55rem] uppercase tracking-[0.16em] text-gold">
+            <Star className="size-2.5" aria-hidden="true" /> Editor&apos;s pick
+          </p>
+        )}
+        <h3 className="text-lg leading-tight sm:text-xl">
           <Link
             to="/films/$slug"
             params={{ slug: film.slug }}
@@ -76,11 +82,19 @@ export function FilmCard({ film, className }: { film: Film; className?: string }
             {film.title}
           </Link>
         </h3>
-        <p className="text-xs text-muted-foreground">
+        <p className="font-mono text-[0.65rem] uppercase tracking-[0.12em] text-muted-foreground">
           {film.creator} · {film.format}
         </p>
         <p className="line-clamp-2 text-sm text-muted-foreground/90">{film.logline}</p>
-        <div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-1 pt-2 font-mono text-[0.65rem] uppercase tracking-[0.14em] text-muted-foreground">
+
+        <p className="mt-1 border-l-2 border-gold/50 pl-2.5 text-xs leading-snug text-foreground/80">
+          <span className="font-mono text-[0.55rem] uppercase tracking-[0.16em] text-gold">
+            Why we chose it —{" "}
+          </span>
+          {film.editorNote}
+        </p>
+
+        <div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-1 pt-3 font-mono text-[0.65rem] uppercase tracking-[0.14em] text-muted-foreground">
           <span className="inline-flex items-center gap-1">
             <Clock className="size-3" aria-hidden="true" />
             {film.runtimeMin} min
@@ -88,6 +102,7 @@ export function FilmCard({ film, className }: { film: Film; className?: string }
           <span>{film.genres.join(" / ")}</span>
         </div>
       </div>
+
     </article>
   );
 }
