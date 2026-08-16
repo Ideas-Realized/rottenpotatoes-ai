@@ -8,6 +8,7 @@ import { ReviewCard } from "@/components/ReviewCard";
 import { TrailerStage } from "@/components/TrailerStage";
 import { Button } from "@/components/ui/button";
 import { getFilm, recommendations, reviewsForFilm, scoreTier } from "@/data/films";
+import { SITE_URL } from "@/lib/site";
 
 export const Route = createFileRoute("/films/$slug")({
   loader: ({ params }) => {
