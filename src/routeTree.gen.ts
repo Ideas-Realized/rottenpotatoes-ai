@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as DiscoverRouteImport } from './routes/discover'
 import { Route as ReviewsRouteImport } from './routes/reviews'
+import { Route as SubmitRouteImport } from './routes/submit'
 import { Route as FilmsSlugRouteImport } from './routes/films.$slug'
 
 const IndexRoute = IndexRouteImport.update({
@@ -35,6 +36,11 @@ const ReviewsRoute = ReviewsRouteImport.update({
   path: '/reviews',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SubmitRoute = SubmitRouteImport.update({
+  id: '/submit',
+  path: '/submit',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FilmsSlugRoute = FilmsSlugRouteImport.update({
   id: '/films/$slug',
   path: '/films/$slug',
@@ -46,6 +52,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/discover': typeof DiscoverRoute
   '/reviews': typeof ReviewsRoute
+  '/submit': typeof SubmitRoute
   '/films/$slug': typeof FilmsSlugRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +60,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/discover': typeof DiscoverRoute
   '/reviews': typeof ReviewsRoute
+  '/submit': typeof SubmitRoute
   '/films/$slug': typeof FilmsSlugRoute
 }
 export interface FileRoutesById {
@@ -61,14 +69,23 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/discover': typeof DiscoverRoute
   '/reviews': typeof ReviewsRoute
+  '/submit': typeof SubmitRoute
   '/films/$slug': typeof FilmsSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/discover' | '/reviews' | '/films/$slug'
+  fullPaths:
+    '/' | '/about' | '/discover' | '/reviews' | '/submit' | '/films/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/discover' | '/reviews' | '/films/$slug'
-  id: '__root__' | '/' | '/about' | '/discover' | '/reviews' | '/films/$slug'
+  to: '/' | '/about' | '/discover' | '/reviews' | '/submit' | '/films/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/discover'
+    | '/reviews'
+    | '/submit'
+    | '/films/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -76,6 +93,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   DiscoverRoute: typeof DiscoverRoute
   ReviewsRoute: typeof ReviewsRoute
+  SubmitRoute: typeof SubmitRoute
   FilmsSlugRoute: typeof FilmsSlugRoute
 }
 
@@ -109,6 +127,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ReviewsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/submit': {
+      id: '/submit'
+      path: '/submit'
+      fullPath: '/submit'
+      preLoaderRoute: typeof SubmitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/films/$slug': {
       id: '/films/$slug'
       path: '/films/$slug'
@@ -124,6 +149,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   DiscoverRoute: DiscoverRoute,
   ReviewsRoute: ReviewsRoute,
+  SubmitRoute: SubmitRoute,
   FilmsSlugRoute: FilmsSlugRoute,
 }
 export const routeTree = rootRouteImport
