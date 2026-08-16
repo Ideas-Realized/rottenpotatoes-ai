@@ -12,3 +12,10 @@ manual guardrails; no automated CI enforces them.
 - [Release QA Checklist](qa/CHECKLIST.md) — 390x844 and 1280x720 review pass.
 - [Prompt Practice](prompts/README.md) — append-only numbered addenda and the
   verify-before-retry rule.
+
+## Release status and roadmap
+
+- [V1 Status Matrix](V1-STATUS.md) — requirement-by-requirement completion state
+  for the public-demo frontend.
+- [Backend Handoff](BACKEND-HANDOFF.md) — proposed next-phase entities, roles,
+  workflow, and staged implementation order.

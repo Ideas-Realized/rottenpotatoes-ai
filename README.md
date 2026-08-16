@@ -34,11 +34,18 @@ Design and process guardrails live in [`docs/`](docs/README.md). These are
 reviewed manually; no automated CI enforces them.
 
 - [Design Contract](docs/design/DESIGN-CONTRACT.md) — product scope, brand,
-  visual signature, system and accessibility rules.
+  visual signature, system rules, accessibility and delivery constraints.
 - [Page Signature](docs/design/PAGE-SIGNATURE.md) — "Cult cinema review desk"
-  page roles, navigation tone, color and motion boundaries.
+  page roles, navigation tone, hero/key-art approach, color and motion boundaries.
 - [Component Registry](docs/design/COMPONENT-REGISTRY.md) — shared components and
   reuse vs extend guidance.
 - [Release QA Checklist](docs/qa/CHECKLIST.md) — 390x844 and 1280x720 review pass.
 - [Prompt Practice](docs/prompts/README.md) — append-only numbered addenda and
   verify-before-retry.
+
+## Release status and roadmap
+
+- [V1 Status Matrix](docs/V1-STATUS.md) — requirement-by-requirement completion
+  state for the public-demo frontend.
+- [Backend Handoff](docs/BACKEND-HANDOFF.md) — proposed next-phase entities,
+  roles, workflow, and staged implementation order.
