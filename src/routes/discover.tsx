@@ -220,7 +220,7 @@ function Discover() {
               max={50}
               step={1}
               value={[maxRuntime]}
-              onValueChange={([v]) => setMaxRuntime(v)}
+              onValueChange={(v) => setMaxRuntime(v[0] ?? 50)}
             />
           </div>
 
@@ -235,7 +235,7 @@ function Discover() {
               max={100}
               step={5}
               value={[minScore]}
-              onValueChange={([v]) => setMinScore(v)}
+              onValueChange={(v) => setMinScore(v[0] ?? 0)}
             />
           </div>
 
