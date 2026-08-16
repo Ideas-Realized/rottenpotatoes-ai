@@ -82,7 +82,7 @@ function Home() {
             <div className="film-edge overflow-hidden rounded-lg border border-gold/25 bg-surface p-3 shadow-[var(--shadow-frame)]">
               <PosterArt film={featured} className="aspect-[3/4] w-full" compact />
             </div>
-            <div className="absolute -bottom-6 left-6 right-6 rounded-md border border-gold/40 bg-background/95 p-4 backdrop-blur">
+            <div className="absolute bottom-5 left-5 right-5 rounded-md border border-gold/40 bg-background/95 p-4 backdrop-blur">
               <p className="eyebrow">Now on the marquee</p>
               <p className="mt-1 font-display text-xl leading-tight">{featured.title}</p>
               <p className="mt-1 text-xs text-muted-foreground">
