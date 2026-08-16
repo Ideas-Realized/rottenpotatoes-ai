@@ -43,7 +43,7 @@ export const Route = createFileRoute("/discover")({
   component: Discover,
 });
 
-type SortKey = "score" | "newest" | "crowd" | "runtime";
+type SortKey = "editorial" | "score" | "newest" | "crowd" | "runtime";
 
 function Discover() {
   const params = Route.useSearch();
@@ -56,7 +56,8 @@ function Discover() {
   const [maxRuntime, setMaxRuntime] = useState(50);
   const [minScore, setMinScore] = useState(0);
   const [year, setYear] = useState<string>("all");
-  const [sort, setSort] = useState<SortKey>("score");
+  const [sort, setSort] = useState<SortKey>("editorial");
+  const [picksOnly, setPicksOnly] = useState(false);
   const [panelOpen, setPanelOpen] = useState(false);
 
   const toggle = (list: string[], set: (v: string[]) => void, value: string) =>
@@ -73,6 +74,7 @@ function Discover() {
           .includes(q)
       )
         return false;
+      if (picksOnly && !f.editorsPick) return false;
       if (formats.length && !formats.includes(f.format)) return false;
       if (genres.length && !f.genres.some((g) => genres.includes(g))) return false;
       if (tools.length && !f.tools.some((t) => tools.includes(t))) return false;
@@ -83,16 +85,23 @@ function Discover() {
     });
 
     const sorters: Record<SortKey, (a: typeof films[number], b: typeof films[number]) => number> = {
+      editorial: editorialOrder,
       score: (a, b) => b.spudScore - a.spudScore,
       crowd: (a, b) => b.crowdCrop - a.crowdCrop,
       newest: (a, b) => b.releaseDate.localeCompare(a.releaseDate),
       runtime: (a, b) => a.runtimeMin - b.runtimeMin,
     };
     return [...out].sort(sorters[sort]);
-  }, [query, formats, genres, tools, maxRuntime, minScore, year, sort]);
+  }, [query, formats, genres, tools, maxRuntime, minScore, year, sort, picksOnly]);
 
   const activeCount =
-    formats.length + genres.length + tools.length + (maxRuntime < 50 ? 1 : 0) + (minScore > 0 ? 1 : 0) + (year !== "all" ? 1 : 0);
+    formats.length +
+    genres.length +
+    tools.length +
+    (maxRuntime < 50 ? 1 : 0) +
+    (minScore > 0 ? 1 : 0) +
+    (year !== "all" ? 1 : 0) +
+    (picksOnly ? 1 : 0);
 
   const reset = () => {
     setQuery("");
@@ -102,17 +111,27 @@ function Discover() {
     setMaxRuntime(50);
     setMinScore(0);
     setYear("all");
+    setPicksOnly(false);
     navigate({ search: {} });
   };
 
+  const sortBlurb: Record<SortKey, string> = {
+    editorial: "Curator picks first, then Spud Score, then recency. Our house order.",
+    score: "Straight Spud Score, highest first. Ignores what we would actually recommend.",
+    crowd: "Community numbers only. Expect the crowd-pleasers to jump.",
+    newest: "Most recent fictional release date first.",
+    runtime: "Shortest first, for when you have nine minutes.",
+  };
+
   return (
-    <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
+    <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12">
       <p className="eyebrow">The vault</p>
       <h1 className="mt-3 text-4xl sm:text-6xl">Discover</h1>
       <p className="mt-4 max-w-2xl text-muted-foreground">
-        {films.length} fictional works, filterable down to the frame. Everything below is invented
-        for this demo.
+        {films.length} fictional works, filterable down to the frame. Sorted the way our curators
+        would hand them to you, not by raw score. Everything below is invented for this demo.
       </p>
+
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
         <div className="relative flex-1">
