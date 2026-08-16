@@ -15,7 +15,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { films, FORMATS, GENRES, TOOLS, type Format } from "@/data/films";
+import { editorialOrder, films, FORMATS, GENRES, TOOLS, type Format } from "@/data/films";
 
 type SearchParams = { format?: string | undefined; q?: string | undefined };
 
