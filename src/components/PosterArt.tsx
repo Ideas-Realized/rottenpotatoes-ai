@@ -327,7 +327,7 @@ export function PosterArt({ film, className, compact = false, showCredit = false
           </p>
         )}
         {showCredit && (
-          <p className="mt-1 max-w-[38ch] font-mono text-[0.55rem] uppercase leading-relaxed tracking-[0.16em] text-muted-foreground">
+          <p className="mt-1 hidden max-w-[38ch] font-mono text-[0.55rem] uppercase leading-relaxed tracking-[0.16em] text-muted-foreground sm:block">
             {film.creator ? `A fictional work by ${film.creator}` : "Fictional work"}
             {film.artNote ? ` · Key art: ${film.artNote}` : ""}
           </p>
