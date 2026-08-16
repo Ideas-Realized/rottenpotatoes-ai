@@ -256,4 +256,21 @@
   .grain-layer {
     animation: none !important;
   }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* suppress decorative transform/scale hover motion */
+  .group:hover,
+  a:hover,
+  button:hover,
+  article:hover {
+    transform: none !important;
+  }
 }
