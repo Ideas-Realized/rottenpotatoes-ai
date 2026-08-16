@@ -27,3 +27,18 @@ npm run dev
 - TypeScript
 - React
 - Tailwind CSS
+
+## Design system documentation
+
+Design and process guardrails live in [`docs/`](docs/README.md). These are
+reviewed manually; no automated CI enforces them.
+
+- [Design Contract](docs/design/DESIGN-CONTRACT.md) — product scope, brand,
+  visual signature, system and accessibility rules.
+- [Page Signature](docs/design/PAGE-SIGNATURE.md) — "Cult cinema review desk"
+  page roles, navigation tone, color and motion boundaries.
+- [Component Registry](docs/design/COMPONENT-REGISTRY.md) — shared components and
+  reuse vs extend guidance.
+- [Release QA Checklist](docs/qa/CHECKLIST.md) — 390x844 and 1280x720 review pass.
+- [Prompt Practice](docs/prompts/README.md) — append-only numbered addenda and
+  verify-before-retry.
