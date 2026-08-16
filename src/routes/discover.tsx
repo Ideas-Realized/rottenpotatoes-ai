@@ -1,6 +1,6 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { SlidersHorizontal, Search, X } from "lucide-react";
+import { SlidersHorizontal, Search, Star, X } from "lucide-react";
 
 import { FilmCard } from "@/components/FilmCard";
 import { Button } from "@/components/ui/button";
@@ -152,10 +152,11 @@ function Discover() {
           />
         </div>
         <Select value={sort} onValueChange={(v) => setSort(v as SortKey)}>
-          <SelectTrigger className="h-11 sm:w-56" aria-label="Sort results">
+          <SelectTrigger className="h-11 sm:w-60" aria-label="Sort results">
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
+            <SelectItem value="editorial">Editorial order (default)</SelectItem>
             <SelectItem value="score">Highest Spud Score</SelectItem>
             <SelectItem value="crowd">Highest Crowd Crop</SelectItem>
             <SelectItem value="newest">Newest release</SelectItem>
@@ -172,6 +173,23 @@ function Discover() {
           <SlidersHorizontal className="size-4" /> Filters {activeCount ? `(${activeCount})` : ""}
         </Button>
       </div>
+
+      <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-xs text-muted-foreground">{sortBlurb[sort]}</p>
+        <button
+          type="button"
+          onClick={() => setPicksOnly((v) => !v)}
+          aria-pressed={picksOnly}
+          className={`inline-flex min-h-9 w-fit items-center gap-1.5 rounded-sm border px-3 py-1.5 font-mono text-[0.6rem] uppercase tracking-[0.16em] transition-colors ${
+            picksOnly
+              ? "border-gold bg-gold/15 text-gold"
+              : "border-border text-muted-foreground hover:border-gold/60 hover:text-gold"
+          }`}
+        >
+          <Star className="size-3" aria-hidden="true" /> Editor&apos;s picks only
+        </button>
+      </div>
+
 
       <div className="mt-8 grid gap-8 lg:grid-cols-[260px_1fr]">
         <aside
