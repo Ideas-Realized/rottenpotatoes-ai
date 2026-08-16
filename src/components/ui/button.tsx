@@ -20,8 +20,9 @@ const buttonVariants = cva(
           "bg-[image:var(--gradient-gold)] text-primary-foreground font-mono text-xs uppercase tracking-[0.16em] shadow-[var(--shadow-gold)] hover:brightness-110",
         rind: "border border-gold/60 text-gold font-mono text-xs uppercase tracking-[0.16em] hover:bg-gold/10",
         rot: "bg-rot text-destructive-foreground hover:brightness-110",
-
+      },
       size: {
+
         default: "h-9 px-4 py-2",
         sm: "h-8 rounded-md px-3 text-xs",
         lg: "h-10 rounded-md px-8",
