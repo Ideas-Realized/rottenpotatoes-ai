@@ -97,7 +97,7 @@ function FilmDetail() {
               </p>
 
               <div className="mt-7 flex flex-wrap items-center gap-3">
-                <SaveButton film={film} className="h-9 px-3 text-sm" />
+                <SaveButton film={film} className="min-h-11 px-3 text-sm sm:min-h-9" />
                 <Button
                   variant="rind"
                   onClick={() =>

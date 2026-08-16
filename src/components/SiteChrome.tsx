@@ -45,7 +45,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="ml-auto inline-flex items-center gap-2 rounded-sm border border-border px-3 py-2 font-mono text-xs uppercase tracking-widest md:hidden"
+          className="ml-auto inline-flex min-h-11 items-center gap-2 rounded-sm border border-border px-3 py-2 font-mono text-xs uppercase tracking-widest md:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((v) => !v)}
@@ -66,7 +66,7 @@ export function SiteHeader() {
               to={item.to}
               onClick={() => setOpen(false)}
               activeProps={{ className: "text-gold" }}
-              className="py-2.5 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground"
+              className="flex min-h-11 items-center font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground"
             >
               {item.label}
             </Link>
@@ -152,17 +152,17 @@ export function SiteFooter() {
           <h2 className="font-mono text-xs uppercase tracking-[0.18em] text-gold">Explore</h2>
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
             <li>
-              <Link to="/discover" className="hover:text-foreground">
+              <Link to="/discover" className="inline-flex min-h-11 items-center hover:text-foreground sm:min-h-0">
                 Discover
               </Link>
             </li>
             <li>
-              <Link to="/reviews" className="hover:text-foreground">
+              <Link to="/reviews" className="inline-flex min-h-11 items-center hover:text-foreground sm:min-h-0">
                 Reviews
               </Link>
             </li>
             <li>
-              <Link to="/about" className="hover:text-foreground">
+              <Link to="/about" className="inline-flex min-h-11 items-center hover:text-foreground sm:min-h-0">
                 Methodology
               </Link>
             </li>
@@ -172,17 +172,17 @@ export function SiteFooter() {
           <h2 className="font-mono text-xs uppercase tracking-[0.18em] text-gold">Creators</h2>
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
             <li>
-              <Link to="/submit" className="hover:text-foreground">
+              <Link to="/submit" className="inline-flex min-h-11 items-center hover:text-foreground sm:min-h-0">
                 Submit a Film
               </Link>
             </li>
             <li>
-              <Link to="/about" className="hover:text-foreground">
+              <Link to="/about" className="inline-flex min-h-11 items-center hover:text-foreground sm:min-h-0">
                 Disclosure Policy
               </Link>
             </li>
             <li>
-              <Link to="/about" className="hover:text-foreground">
+              <Link to="/about" className="inline-flex min-h-11 items-center hover:text-foreground sm:min-h-0">
                 Code of Conduct
               </Link>
             </li>

@@ -27,7 +27,7 @@ export function SaveButton({ film, className }: { film: Film; className?: string
         });
       }}
       className={cn(
-        "inline-flex min-h-9 items-center gap-1.5 rounded-sm border border-border/80 bg-background/70 px-2.5 py-1.5 text-xs text-muted-foreground backdrop-blur transition-colors hover:border-gold/60 hover:text-gold",
+        "inline-flex min-h-11 items-center sm:min-h-9 gap-1.5 rounded-sm border border-border/80 bg-background/70 px-2.5 py-1.5 text-xs text-muted-foreground backdrop-blur transition-colors hover:border-gold/60 hover:text-gold",
         saved && "border-gold/70 text-gold",
         className,
       )}

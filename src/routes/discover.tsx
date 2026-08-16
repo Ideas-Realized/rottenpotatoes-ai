@@ -194,7 +194,7 @@ function Discover() {
           type="button"
           onClick={() => setPicksOnly((v) => !v)}
           aria-pressed={picksOnly}
-          className={`inline-flex min-h-9 w-fit items-center gap-1.5 rounded-sm border px-3 py-1.5 font-mono text-[0.6rem] uppercase tracking-[0.16em] transition-colors ${
+          className={`inline-flex min-h-11 w-fit items-center sm:min-h-9 gap-1.5 rounded-sm border px-3 py-1.5 font-mono text-[0.6rem] uppercase tracking-[0.16em] transition-colors ${
             picksOnly
               ? "border-gold bg-gold/15 text-gold"
               : "border-border text-muted-foreground hover:border-gold/60 hover:text-gold"
@@ -216,7 +216,7 @@ function Discover() {
               <button
                 type="button"
                 onClick={reset}
-                className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-gold"
+                className="inline-flex min-h-11 items-center gap-1 text-xs text-muted-foreground hover:text-gold sm:min-h-0"
               >
                 <X className="size-3" aria-hidden="true" /> Clear
               </button>
@@ -362,7 +362,7 @@ function CheckRow({
   onChange: () => void;
 }) {
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex min-h-11 items-center gap-2 sm:min-h-0">
       <Checkbox id={id} checked={checked} onCheckedChange={onChange} />
       <Label htmlFor={id} className="cursor-pointer text-sm font-normal text-foreground/90">
         {label}
