@@ -700,3 +700,14 @@ export function scoreTier(score: number) {
   if (score >= 60) return { label: "Edible", tone: "ember" as const };
   return { label: "Rotten", tone: "rot" as const };
 }
+
+/**
+ * Default editorial ordering used on Discover: curator picks first,
+ * then Spud Score, then recency. Deliberately not a raw score sort.
+ */
+export function editorialOrder(a: Film, b: Film) {
+  if (a.editorsPick !== b.editorsPick) return a.editorsPick ? -1 : 1;
+  return b.spudScore - a.spudScore || b.releaseDate.localeCompare(a.releaseDate);
+}
+
+export const editorsPicks = films.filter((f) => f.editorsPick);
