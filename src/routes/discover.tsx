@@ -294,18 +294,22 @@ function Discover() {
         <section aria-label="Results">
           <p aria-live="polite" className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
             {results.length} {results.length === 1 ? "film" : "films"} found
+            {activeCount > 0 && <span className="text-gold"> · {activeCount} filters on</span>}
           </p>
           {results.length === 0 ? (
-            <div className="mt-6 rounded-lg border border-dashed border-border p-12 text-center">
-              <h2 className="text-2xl">Nothing in this bin</h2>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Loosen a filter and the potatoes will return.
+            <div className="mt-6 rounded-lg border border-dashed border-border p-8 text-center sm:p-12">
+              <h2 className="text-2xl">Empty bin</h2>
+              <p className="mx-auto mt-2 max-w-sm text-sm text-muted-foreground">
+                {query.trim()
+                  ? `Nothing in the vault matches “${query.trim()}” with these filters. Try a tool name, a genre, or a creator.`
+                  : "These filters are tighter than our review standards. Loosen one and the potatoes come back."}
               </p>
               <Button variant="rind" className="mt-6" onClick={reset}>
-                Clear filters
+                Clear everything
               </Button>
             </div>
           ) : (
+
             <ul className="mt-5 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
               {results.map((film) => (
                 <li key={film.slug}>
