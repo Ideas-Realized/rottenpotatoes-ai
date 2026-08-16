@@ -38,8 +38,28 @@ export type Film = {
   consensus: string;
   tools: string[];
   posterHue: number; // drives CSS-generated poster art
-  posterMotif: "eclipse" | "tunnel" | "grid" | "orbit" | "strata" | "static";
+  posterMotif:
+    | "steamkitchen"
+    | "rainwindow"
+    | "descent"
+    | "mirrorface"
+    | "moonharvest"
+    | "eclipse"
+    | "tunnel"
+    | "grid"
+    | "orbit"
+    | "strata"
+    | "static";
+  /** Short art-direction note for the CSS-generated key art. */
+  artNote: string;
+  /** Curator micro-detail: why this made the shelf. */
+  editorNote: string;
+  /** Copy for the illustrative trailer placeholder. */
+  sampleNote: string;
+  /** Editorial pick flag, drives default Discover ordering. */
+  editorsPick: boolean;
 };
+
 
 export const GENRES = [
   "Sci-Fi",
