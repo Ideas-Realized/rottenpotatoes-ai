@@ -80,16 +80,20 @@ function Home() {
 
           <div className="relative">
             <div className="film-edge overflow-hidden rounded-lg border border-gold/25 bg-surface p-3 shadow-[var(--shadow-frame)]">
-              <PosterArt film={featured} className="aspect-[3/4] w-full" compact />
+              <PosterArt film={featured} className="aspect-[3/4] w-full" compact showCredit />
             </div>
             <div className="absolute bottom-5 left-5 right-5 rounded-md border border-gold/40 bg-background/95 p-4 backdrop-blur">
               <p className="eyebrow">Now on the marquee</p>
-              <p className="mt-1 font-display text-xl leading-tight">{featured.title}</p>
+              <p className="mt-1 font-display text-lg leading-tight sm:text-xl">{featured.title}</p>
               <p className="mt-1 text-xs text-muted-foreground">
                 {featured.creator} · {featured.runtimeMin} min
               </p>
+              <p className="mt-2 line-clamp-2 text-[0.7rem] leading-snug text-foreground/75">
+                {featured.editorNote}
+              </p>
             </div>
           </div>
+
         </div>
 
         {/* marquee ticker */}
@@ -146,7 +150,14 @@ function Home() {
             <ScoreMeter label="Visual Craft" value={featured.kernelNotes.visualCraft} />
             <ScoreMeter label="Originality" value={featured.kernelNotes.originality} />
             <ScoreMeter label="AI Execution" value={featured.kernelNotes.aiExecution} />
+            <p className="border-t border-border/70 pt-4 text-xs leading-relaxed text-muted-foreground">
+              <span className="font-mono uppercase tracking-[0.16em] text-gold">
+                Why we chose it —{" "}
+              </span>
+              {featured.editorNote}
+            </p>
           </div>
+
         </div>
       </section>
 
