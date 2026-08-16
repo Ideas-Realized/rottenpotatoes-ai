@@ -59,17 +59,20 @@ export function ScoreMeter({
   label,
   value,
   hint,
+  headingLevel = "h4",
 }: {
   label: string;
   value: number;
   hint?: string;
+  headingLevel?: "h3" | "h4";
 }) {
+  const Heading = headingLevel;
   return (
     <div>
       <div className="flex items-baseline justify-between gap-3">
-        <h4 className="font-sans text-sm font-medium normal-case tracking-normal text-foreground">
+        <Heading className="font-sans text-sm font-medium normal-case tracking-normal text-foreground">
           {label}
-        </h4>
+        </Heading>
         <span className="font-mono text-sm tabular-nums text-gold">{value}</span>
       </div>
       <div
