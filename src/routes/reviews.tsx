@@ -13,6 +13,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { getFilm, reviewers, reviews } from "@/data/films";
+import { SITE_URL } from "@/lib/site";
 
 export const Route = createFileRoute("/reviews")({
   head: () => ({
@@ -21,14 +22,25 @@ export const Route = createFileRoute("/reviews")({
       {
         name: "description",
         content:
-          "Every fictional curator review in one feed. Filter by reviewer, verdict and format, sorted by date or score.",
+          "Every fictional curator review in one demo feed. Filter by reviewer, verdict and format, sorted by date or invented Spud Score.",
       },
       { property: "og:title", content: "Editorial Reviews — Rotten Potatoes" },
       {
         property: "og:description",
-        content: "Curator reviews of AI-generated films, with named reviewers and open scoring.",
+        content:
+          "Every fictional curator review in one demo feed. Filter by reviewer, verdict and format, sorted by date or invented Spud Score.",
+      },
+      { property: "og:url", content: `${SITE_URL}/reviews` },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "Editorial Reviews — Rotten Potatoes" },
+      {
+        name: "twitter:description",
+        content:
+          "Every fictional curator review in one demo feed. Filter by reviewer, verdict and format, sorted by date or invented Spud Score.",
       },
     ],
+    links: [{ rel: "canonical", href: `${SITE_URL}/reviews` }],
   }),
   component: Reviews,
 });
@@ -71,10 +83,7 @@ function Reviews() {
 
       <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
         {reviewers.map((r) => (
-          <li
-            key={r.id}
-            className="rounded-md border border-border/70 bg-card p-4"
-          >
+          <li key={r.id} className="rounded-md border border-border/70 bg-card p-4">
             <div className="flex items-center gap-3">
               <ReviewerAvatar initials={r.initials} hue={r.hue} />
               <div>
@@ -138,7 +147,10 @@ function Reviews() {
       </div>
 
       <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
-        <p aria-live="polite" className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+        <p
+          aria-live="polite"
+          className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground"
+        >
           {filtered.length} {filtered.length === 1 ? "review" : "reviews"}
         </p>
         <FilterSelect

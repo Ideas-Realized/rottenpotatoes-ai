@@ -27,13 +27,7 @@ export function ReviewerAvatar({
   );
 }
 
-export function ReviewCard({
-  review,
-  showFilm = true,
-}: {
-  review: Review;
-  showFilm?: boolean;
-}) {
+export function ReviewCard({ review, showFilm = true }: { review: Review; showFilm?: boolean }) {
   const reviewer = getReviewer(review.reviewerId);
   const film = getFilm(review.filmSlug);
 

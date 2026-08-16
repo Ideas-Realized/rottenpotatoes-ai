@@ -7,32 +7,33 @@ import { PosterArt } from "@/components/PosterArt";
 import { ScoreMeter, SpudScore } from "@/components/SpudScore";
 import { Button } from "@/components/ui/button";
 import { categories, editorials, films } from "@/data/films";
+import { SITE_URL } from "@/lib/site";
+
+const TITLE = "Rotten Potatoes — AI cinema has entered the chat";
+const DESCRIPTION =
+  "A fictional demo review destination for AI-generated short films, trailers and experiments. Sample Spud Scores, curators and toolchains are invented.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Rotten Potatoes — AI cinema has entered the chat" },
-      {
-        name: "description",
-        content:
-          "Discover AI-generated short films, fake trailers, music videos and experiments. Curated Spud Scores, honest reviews and the toolchain behind every piece.",
-      },
-      { property: "og:title", content: "Rotten Potatoes — AI cinema has entered the chat" },
-      {
-        property: "og:description",
-        content:
-          "A fictional review destination for AI-generated video: Spud Scores, Kernel Notes and the tools behind each film.",
-      },
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:url", content: `${SITE_URL}/` },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: TITLE },
+      { name: "twitter:description", content: DESCRIPTION },
     ],
+    links: [{ rel: "canonical", href: `${SITE_URL}/` }],
   }),
   component: Home,
 });
 
 function Home() {
   const featured = films.find((f) => f.slug === "the-mashing-hour")!;
-  const fresh = [...films]
-    .sort((a, b) => b.releaseDate.localeCompare(a.releaseDate))
-    .slice(0, 6);
+  const fresh = [...films].sort((a, b) => b.releaseDate.localeCompare(a.releaseDate)).slice(0, 6);
   const crispy = films.filter((f) => f.certifiedCrispy).slice(0, 4);
 
   return (
@@ -44,13 +45,12 @@ function Home() {
           <div className="relative">
             <p className="eyebrow">Est. 2026 · Reviews from the render farm</p>
             <h1 className="mt-5 text-5xl leading-[0.86] sm:text-7xl xl:text-8xl">
-              AI cinema has{" "}
-              <span className="text-gradient-gold">entered the chat.</span>
+              AI cinema has <span className="text-gradient-gold">entered the chat.</span>
             </h1>
             <p className="mt-6 max-w-xl text-base text-muted-foreground sm:text-lg">
               We watch the generated stuff so you don't have to watch all of it. Curated Spud
-              Scores, Kernel Notes on craft, and a full toolchain breakdown for every fictional
-              film in the vault.
+              Scores, Kernel Notes on craft, and a full toolchain breakdown for every fictional film
+              in the vault.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild variant="crispy" size="lg">
@@ -93,7 +93,6 @@ function Home() {
               </p>
             </div>
           </div>
-
         </div>
 
         {/* marquee ticker */}
@@ -157,7 +156,6 @@ function Home() {
               {featured.editorNote}
             </p>
           </div>
-
         </div>
       </section>
 

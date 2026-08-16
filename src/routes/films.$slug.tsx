@@ -8,6 +8,7 @@ import { ReviewCard } from "@/components/ReviewCard";
 import { TrailerStage } from "@/components/TrailerStage";
 import { Button } from "@/components/ui/button";
 import { getFilm, recommendations, reviewsForFilm, scoreTier } from "@/data/films";
+import { SITE_URL } from "@/lib/site";
 
 export const Route = createFileRoute("/films/$slug")({
   loader: ({ params }) => {
@@ -15,7 +16,7 @@ export const Route = createFileRoute("/films/$slug")({
     if (!film) throw notFound();
     return { film };
   },
-  head: ({ loaderData }) => {
+  head: ({ params, loaderData }) => {
     if (!loaderData) {
       return {
         meta: [{ title: "Unavailable — Rotten Potatoes" }, { name: "robots", content: "noindex" }],
@@ -23,13 +24,21 @@ export const Route = createFileRoute("/films/$slug")({
     }
     const { film } = loaderData;
     const title = `${film.title} (${film.year}) — Spud Score ${film.spudScore} | Rotten Potatoes`;
+    const description = `Fictional sample ${film.format.toLowerCase()}: ${film.logline} Invented Spud Score ${film.spudScore}, curator notes and toolchain.`;
+    const url = `${SITE_URL}/films/${params.slug}`;
     return {
       meta: [
         { title },
-        { name: "description", content: film.logline },
+        { name: "description", content: description },
         { property: "og:title", content: title },
-        { property: "og:description", content: film.logline },
+        { property: "og:description", content: description },
+        { property: "og:url", content: url },
+        { property: "og:type", content: "article" },
+        { name: "twitter:card", content: "summary" },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: description },
       ],
+      links: [{ rel: "canonical", href: url }],
     };
   },
   component: FilmDetail,
@@ -46,7 +55,10 @@ function FilmDetail() {
       {/* HERO */}
       <div className="spotlight border-b border-border/70">
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
-          <nav aria-label="Breadcrumb" className="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-muted-foreground">
+          <nav
+            aria-label="Breadcrumb"
+            className="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-muted-foreground"
+          >
             <Link to="/discover" className="hover:text-gold">
               Discover
             </Link>{" "}
