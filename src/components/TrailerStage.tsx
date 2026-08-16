@@ -35,8 +35,7 @@ export function TrailerStage({ film, className }: { film: Film; className?: stri
   }, [playing]);
 
   const pct = (elapsed / total) * 100;
-  const fmt = (s: number) =>
-    `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
+  const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
 
   return (
     <div className={cn("space-y-3", className)}>

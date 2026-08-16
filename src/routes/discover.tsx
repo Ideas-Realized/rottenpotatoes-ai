@@ -28,15 +28,27 @@ export const Route = createFileRoute("/discover")({
 
   head: () => ({
     meta: [
-      { title: 'Discover AI Films — Rotten Potatoes' },
-      { name: "description", content: 'Search and filter fictional sample AI-generated films by format, genre, runtime, generation tools, release date and Spud Score.' },
-      { property: "og:title", content: 'Discover AI Films — Rotten Potatoes' },
-      { property: "og:description", content: 'Search and filter fictional sample AI-generated films by format, genre, runtime, generation tools, release date and Spud Score.' },
+      { title: "Discover AI Films — Rotten Potatoes" },
+      {
+        name: "description",
+        content:
+          "Search and filter fictional sample AI-generated films by format, genre, runtime, generation tools, release date and Spud Score.",
+      },
+      { property: "og:title", content: "Discover AI Films — Rotten Potatoes" },
+      {
+        property: "og:description",
+        content:
+          "Search and filter fictional sample AI-generated films by format, genre, runtime, generation tools, release date and Spud Score.",
+      },
       { property: "og:url", content: `${SITE_URL}/discover` },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: 'Discover AI Films — Rotten Potatoes' },
-      { name: "twitter:description", content: 'Search and filter fictional sample AI-generated films by format, genre, runtime, generation tools, release date and Spud Score.' },
+      { name: "twitter:title", content: "Discover AI Films — Rotten Potatoes" },
+      {
+        name: "twitter:description",
+        content:
+          "Search and filter fictional sample AI-generated films by format, genre, runtime, generation tools, release date and Spud Score.",
+      },
     ],
     links: [{ rel: "canonical", href: `${SITE_URL}/discover` }],
   }),
@@ -84,7 +96,10 @@ function Discover() {
       return true;
     });
 
-    const sorters: Record<SortKey, (a: typeof films[number], b: typeof films[number]) => number> = {
+    const sorters: Record<
+      SortKey,
+      (a: (typeof films)[number], b: (typeof films)[number]) => number
+    > = {
       editorial: editorialOrder,
       score: (a, b) => b.spudScore - a.spudScore,
       crowd: (a, b) => b.crowdCrop - a.crowdCrop,
@@ -131,7 +146,6 @@ function Discover() {
         {films.length} fictional works, filterable down to the frame. Sorted the way our curators
         would hand them to you, not by raw score. Everything below is invented for this demo.
       </p>
-
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
         <div className="relative flex-1">
@@ -189,7 +203,6 @@ function Discover() {
           <Star className="size-3" aria-hidden="true" /> Editor&apos;s picks only
         </button>
       </div>
-
 
       <div className="mt-8 grid gap-8 lg:grid-cols-[260px_1fr]">
         <aside
@@ -292,7 +305,10 @@ function Discover() {
         </aside>
 
         <section aria-label="Results">
-          <p aria-live="polite" className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+          <p
+            aria-live="polite"
+            className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground"
+          >
             {results.length} {results.length === 1 ? "film" : "films"} found
             {activeCount > 0 && <span className="text-gold"> · {activeCount} filters on</span>}
           </p>
@@ -309,7 +325,6 @@ function Discover() {
               </Button>
             </div>
           ) : (
-
             <ul className="mt-5 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
               {results.map((film) => (
                 <li key={film.slug}>

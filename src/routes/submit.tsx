@@ -21,15 +21,27 @@ import { SITE_URL } from "@/lib/site";
 export const Route = createFileRoute("/submit")({
   head: () => ({
     meta: [
-      { title: 'Submit a Film — Rotten Potatoes' },
-      { name: "description", content: 'Send your AI-generated short, trailer or experiment to our fictional curators. Demo submission form only, no uploads are processed.' },
-      { property: "og:title", content: 'Submit a Film — Rotten Potatoes' },
-      { property: "og:description", content: 'Send your AI-generated short, trailer or experiment to our fictional curators. Demo submission form only, no uploads are processed.' },
+      { title: "Submit a Film — Rotten Potatoes" },
+      {
+        name: "description",
+        content:
+          "Send your AI-generated short, trailer or experiment to our fictional curators. Demo submission form only, no uploads are processed.",
+      },
+      { property: "og:title", content: "Submit a Film — Rotten Potatoes" },
+      {
+        property: "og:description",
+        content:
+          "Send your AI-generated short, trailer or experiment to our fictional curators. Demo submission form only, no uploads are processed.",
+      },
       { property: "og:url", content: `${SITE_URL}/submit` },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: 'Submit a Film — Rotten Potatoes' },
-      { name: "twitter:description", content: 'Send your AI-generated short, trailer or experiment to our fictional curators. Demo submission form only, no uploads are processed.' },
+      { name: "twitter:title", content: "Submit a Film — Rotten Potatoes" },
+      {
+        name: "twitter:description",
+        content:
+          "Send your AI-generated short, trailer or experiment to our fictional curators. Demo submission form only, no uploads are processed.",
+      },
     ],
     links: [{ rel: "canonical", href: `${SITE_URL}/submit` }],
   }),
@@ -130,7 +142,15 @@ function Submit() {
           </div>
           <div className="grid gap-5 sm:grid-cols-2">
             <Field id="runtime" label="Runtime (minutes)" required>
-              <Input id="runtime" name="runtime" type="number" min={1} max={50} required placeholder="12" />
+              <Input
+                id="runtime"
+                name="runtime"
+                type="number"
+                min={1}
+                max={50}
+                required
+                placeholder="12"
+              />
             </Field>
             <Field id="release" label="Release date" required>
               <Input id="release" name="release" type="date" required />

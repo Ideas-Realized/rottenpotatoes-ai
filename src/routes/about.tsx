@@ -14,15 +14,27 @@ import { SITE_URL } from "@/lib/site";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: 'Methodology & Policies — Rotten Potatoes' },
-      { name: "description", content: 'How the fictional Spud Score is calculated, how editorial and community signals differ, plus disclosure and code-of-conduct policies.' },
-      { property: "og:title", content: 'Methodology & Policies — Rotten Potatoes' },
-      { property: "og:description", content: 'How the fictional Spud Score is calculated, how editorial and community signals differ, plus disclosure and code-of-conduct policies.' },
+      { title: "Methodology & Policies — Rotten Potatoes" },
+      {
+        name: "description",
+        content:
+          "How the fictional Spud Score is calculated, how editorial and community signals differ, plus disclosure and code-of-conduct policies.",
+      },
+      { property: "og:title", content: "Methodology & Policies — Rotten Potatoes" },
+      {
+        property: "og:description",
+        content:
+          "How the fictional Spud Score is calculated, how editorial and community signals differ, plus disclosure and code-of-conduct policies.",
+      },
       { property: "og:url", content: `${SITE_URL}/about` },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: 'Methodology & Policies — Rotten Potatoes' },
-      { name: "twitter:description", content: 'How the fictional Spud Score is calculated, how editorial and community signals differ, plus disclosure and code-of-conduct policies.' },
+      { name: "twitter:title", content: "Methodology & Policies — Rotten Potatoes" },
+      {
+        name: "twitter:description",
+        content:
+          "How the fictional Spud Score is calculated, how editorial and community signals differ, plus disclosure and code-of-conduct policies.",
+      },
     ],
     links: [{ rel: "canonical", href: `${SITE_URL}/about` }],
   }),
@@ -32,7 +44,11 @@ export const Route = createFileRoute("/about")({
 const weights = [
   { label: "Story (30%)", value: 30, hint: "Structure, intent, whether it earns its runtime." },
   { label: "Visual Craft (30%)", value: 30, hint: "Grade, composition, motion, artifact control." },
-  { label: "Originality (25%)", value: 25, hint: "Is this a voice, or a preset with a title card?" },
+  {
+    label: "Originality (25%)",
+    value: 25,
+    hint: "Is this a voice, or a preset with a title card?",
+  },
   { label: "AI Execution (15%)", value: 15, hint: "Toolchain discipline and honest disclosure." },
 ];
 

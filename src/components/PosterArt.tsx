@@ -39,7 +39,9 @@ export function PosterArt({ film, className, compact = false, showCredit = false
 
     // Backlit figure in a steam-filled service kitchen.
     steamkitchen: [
-      { style: { backgroundImage: `linear-gradient(185deg, ${mid} 0%, ${base} 48%, ${ink} 100%)` } },
+      {
+        style: { backgroundImage: `linear-gradient(185deg, ${mid} 0%, ${base} 48%, ${ink} 100%)` },
+      },
       {
         style: {
           backgroundImage: `repeating-linear-gradient(90deg, ${ink} 0 2px, transparent 2px 34px), repeating-linear-gradient(0deg, ${ink} 0 2px, transparent 2px 46px)`,
@@ -118,7 +120,9 @@ export function PosterArt({ film, className, compact = false, showCredit = false
 
     // Descending arches into a root cellar.
     descent: [
-      { style: { backgroundImage: `linear-gradient(180deg, ${ink} 0%, ${base} 40%, ${mid} 100%)` } },
+      {
+        style: { backgroundImage: `linear-gradient(180deg, ${ink} 0%, ${base} 40%, ${mid} 100%)` },
+      },
       {
         style: {
           backgroundImage: `repeating-radial-gradient(ellipse 62% 40% at 50% 96%, transparent 0 5%, ${ink} 5% 7%, transparent 7% 12%)`,
@@ -178,7 +182,9 @@ export function PosterArt({ film, className, compact = false, showCredit = false
 
     // Oversized low moon behind a hard wheat horizon.
     moonharvest: [
-      { style: { backgroundImage: `linear-gradient(180deg, ${ink} 0%, ${base} 52%, ${mid} 100%)` } },
+      {
+        style: { backgroundImage: `linear-gradient(180deg, ${ink} 0%, ${base} 52%, ${mid} 100%)` },
+      },
       {
         style: {
           backgroundImage: `radial-gradient(circle at 50% 62%, ${hot} 0 21%, ${warm} 21% 22.5%, transparent 23%)`,
@@ -248,7 +254,9 @@ export function PosterArt({ film, className, compact = false, showCredit = false
       },
     ],
     strata: [
-      { style: { backgroundImage: `linear-gradient(180deg, ${mid} 0%, ${base} 55%, ${ink} 100%)` } },
+      {
+        style: { backgroundImage: `linear-gradient(180deg, ${mid} 0%, ${base} 55%, ${ink} 100%)` },
+      },
       {
         style: {
           backgroundImage: `repeating-linear-gradient(175deg, ${hot} 0 2px, transparent 2px 8px)`,
@@ -308,8 +316,7 @@ export function PosterArt({ film, className, compact = false, showCredit = false
         className="absolute inset-0"
         aria-hidden="true"
         style={{
-          backgroundImage:
-            "linear-gradient(to top, oklch(0.11 0.01 60/0.94) 0%, transparent 62%)",
+          backgroundImage: "linear-gradient(to top, oklch(0.11 0.01 60/0.94) 0%, transparent 62%)",
         }}
       />
       <div

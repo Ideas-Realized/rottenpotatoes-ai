@@ -38,7 +38,6 @@ export function SaveButton({ film, className }: { film: Film; className?: string
   );
 }
 
-
 export function FilmCard({ film, className }: { film: Film; className?: string }) {
   return (
     <article
@@ -102,7 +101,6 @@ export function FilmCard({ film, className }: { film: Film; className?: string }
           <span>{film.genres.join(" / ")}</span>
         </div>
       </div>
-
     </article>
   );
 }

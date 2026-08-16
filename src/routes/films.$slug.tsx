@@ -55,7 +55,10 @@ function FilmDetail() {
       {/* HERO */}
       <div className="spotlight border-b border-border/70">
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
-          <nav aria-label="Breadcrumb" className="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-muted-foreground">
+          <nav
+            aria-label="Breadcrumb"
+            className="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-muted-foreground"
+          >
             <Link to="/discover" className="hover:text-gold">
               Discover
             </Link>{" "}

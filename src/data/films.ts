@@ -4,12 +4,7 @@
  * for this demo. Nothing here describes real people, films, or products.
  */
 
-export type Format =
-  | "Short Film"
-  | "Trailer"
-  | "Music Video"
-  | "Experimental"
-  | "Documentary";
+export type Format = "Short Film" | "Trailer" | "Music Video" | "Experimental" | "Documentary";
 
 export type KernelNotes = {
   story: number;
@@ -59,7 +54,6 @@ export type Film = {
   /** Editorial pick flag, drives default Discover ordering. */
   editorsPick: boolean;
 };
-
 
 export const GENRES = [
   "Sci-Fi",
@@ -267,8 +261,10 @@ export const films: Film[] = [
     posterHue: 44,
     posterMotif: "grid",
     artNote: "billing-block grid, fake studio bumper",
-    editorNote: "Best technical mimicry of trailer grammar on the site. Watch the first forty seconds.",
-    sampleNote: "Illustrative sample only. There is no film, no sequel, and no trailer footage here.",
+    editorNote:
+      "Best technical mimicry of trailer grammar on the site. Watch the first forty seconds.",
+    sampleNote:
+      "Illustrative sample only. There is no film, no sequel, and no trailer footage here.",
     editorsPick: false,
   },
   {
@@ -389,7 +385,6 @@ export const films: Film[] = [
     editorsPick: false,
   },
 ];
-
 
 export type Reviewer = {
   id: string;
@@ -617,7 +612,6 @@ export const reviews: Review[] = [
     date: "2026-05-12",
   },
 ];
-
 
 export type Editorial = {
   id: string;
