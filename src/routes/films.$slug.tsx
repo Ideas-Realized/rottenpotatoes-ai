@@ -74,6 +74,16 @@ function FilmDetail() {
               <p className="mt-5 max-w-2xl text-lg text-foreground/90">{film.logline}</p>
               <p className="mt-4 max-w-2xl text-sm text-muted-foreground">{film.synopsis}</p>
 
+              <p className="mt-6 max-w-2xl border-l-2 border-gold pl-4 text-sm text-foreground/85">
+                <span className="font-mono text-[0.6rem] uppercase tracking-[0.18em] text-gold">
+                  Why we chose it —{" "}
+                </span>
+                {film.editorNote}
+              </p>
+              <p className="mt-3 font-mono text-[0.6rem] uppercase tracking-[0.16em] text-muted-foreground">
+                Key art generated in CSS · {film.artNote}
+              </p>
+
               <div className="mt-7 flex flex-wrap items-center gap-3">
                 <SaveButton film={film} className="h-9 px-3 text-sm" />
                 <Button
