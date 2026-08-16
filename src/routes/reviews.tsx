@@ -13,22 +13,22 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { getFilm, reviewers, reviews } from "@/data/films";
+import { SITE_URL } from "@/lib/site";
 
 export const Route = createFileRoute("/reviews")({
   head: () => ({
     meta: [
-      { title: "Editorial Reviews — Rotten Potatoes" },
-      {
-        name: "description",
-        content:
-          "Every fictional curator review in one feed. Filter by reviewer, verdict and format, sorted by date or score.",
-      },
-      { property: "og:title", content: "Editorial Reviews — Rotten Potatoes" },
-      {
-        property: "og:description",
-        content: "Curator reviews of AI-generated films, with named reviewers and open scoring.",
-      },
+      { title: 'Editorial Reviews — Rotten Potatoes' },
+      { name: "description", content: 'Every fictional curator review in one demo feed. Filter by reviewer, verdict and format, sorted by date or invented Spud Score.' },
+      { property: "og:title", content: 'Editorial Reviews — Rotten Potatoes' },
+      { property: "og:description", content: 'Every fictional curator review in one demo feed. Filter by reviewer, verdict and format, sorted by date or invented Spud Score.' },
+      { property: "og:url", content: `${SITE_URL}/reviews` },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: 'Editorial Reviews — Rotten Potatoes' },
+      { name: "twitter:description", content: 'Every fictional curator review in one demo feed. Filter by reviewer, verdict and format, sorted by date or invented Spud Score.' },
     ],
+    links: [{ rel: "canonical", href: `${SITE_URL}/reviews` }],
   }),
   component: Reviews,
 });

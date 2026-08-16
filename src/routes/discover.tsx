@@ -16,6 +16,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { editorialOrder, films, FORMATS, GENRES, TOOLS, type Format } from "@/data/films";
+import { SITE_URL } from "@/lib/site";
 
 type SearchParams = { format?: string | undefined; q?: string | undefined };
 
@@ -27,18 +28,17 @@ export const Route = createFileRoute("/discover")({
 
   head: () => ({
     meta: [
-      { title: "Discover AI Films — Rotten Potatoes" },
-      {
-        name: "description",
-        content:
-          "Search and filter fictional AI-generated films by format, genre, runtime, generation tools, release date and Spud Score.",
-      },
-      { property: "og:title", content: "Discover AI Films — Rotten Potatoes" },
-      {
-        property: "og:description",
-        content: "Filter the vault by format, genre, runtime, toolchain and score.",
-      },
+      { title: 'Discover AI Films — Rotten Potatoes' },
+      { name: "description", content: 'Search and filter fictional sample AI-generated films by format, genre, runtime, generation tools, release date and Spud Score.' },
+      { property: "og:title", content: 'Discover AI Films — Rotten Potatoes' },
+      { property: "og:description", content: 'Search and filter fictional sample AI-generated films by format, genre, runtime, generation tools, release date and Spud Score.' },
+      { property: "og:url", content: `${SITE_URL}/discover` },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: 'Discover AI Films — Rotten Potatoes' },
+      { name: "twitter:description", content: 'Search and filter fictional sample AI-generated films by format, genre, runtime, generation tools, release date and Spud Score.' },
     ],
+    links: [{ rel: "canonical", href: `${SITE_URL}/discover` }],
   }),
   component: Discover,
 });

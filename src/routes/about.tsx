@@ -13,18 +13,17 @@ import {
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "Methodology & Policies — Rotten Potatoes" },
-      {
-        name: "description",
-        content:
-          "How the Spud Score is calculated, how editorial and community signals differ, and our disclosure and code-of-conduct policies.",
-      },
-      { property: "og:title", content: "Methodology & Policies — Rotten Potatoes" },
-      {
-        property: "og:description",
-        content: "Transparent scoring, editorial vs community signals, disclosure rules.",
-      },
+      { title: 'Methodology & Policies — Rotten Potatoes' },
+      { name: "description", content: 'How the fictional Spud Score is calculated, how editorial and community signals differ, plus disclosure and code-of-conduct policies.' },
+      { property: "og:title", content: 'Methodology & Policies — Rotten Potatoes' },
+      { property: "og:description", content: 'How the fictional Spud Score is calculated, how editorial and community signals differ, plus disclosure and code-of-conduct policies.' },
+      { property: "og:url", content: `${SITE_URL}/about` },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: 'Methodology & Policies — Rotten Potatoes' },
+      { name: "twitter:description", content: 'How the fictional Spud Score is calculated, how editorial and community signals differ, plus disclosure and code-of-conduct policies.' },
     ],
+    links: [{ rel: "canonical", href: `${SITE_URL}/about` }],
   }),
   component: About,
 });
