@@ -52,7 +52,7 @@ export function FilmCard({ film, className }: { film: Film; className?: string }
         className="block focus-visible:outline-none"
         aria-label={`Open ${film.title} details`}
       >
-        <PosterArt film={film} className="aspect-[2/3] w-full" />
+        <PosterArt film={film} className="aspect-[2/3] w-full" compact />
       </Link>
 
       <div className="absolute right-2 top-2 z-20 flex flex-col items-end gap-2">
