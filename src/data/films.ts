@@ -103,19 +103,24 @@ export const films: Film[] = [
     format: "Short Film",
     genres: ["Sci-Fi", "Drama"],
     logline:
-      "A night-shift kitchen worker in a flooded megacity discovers the recipe archive has started dreaming without her.",
+      "On the last night shift before her flooded district is decommissioned, a kitchen supervisor realises the meal archive has started cooking for the dead.",
     synopsis:
-      "Set across a single humid shift, this fictional short follows Wren as the automated kitchen she supervises begins improvising meals for people who no longer exist. The film's synthetic crowd scenes were assembled from invented prompt libraries, then hand-graded frame by frame.",
+      "Fourteen minutes, one humid shift, eleven cuts. Wren plates food for ration numbers that stopped scanning six years ago, and the fictional kitchen she supervises keeps insisting the orders are current. Fennimore holds every generated face in mid-shot until it either earns the close-up or admits it cannot, then grades the whole thing the colour of a steam window at 3am.",
     spudScore: 94,
     crowdCrop: 88,
     crowdVotes: 4210,
     certifiedCrispy: true,
     kernelNotes: { story: 92, visualCraft: 96, originality: 95, aiExecution: 93 },
     consensus:
-      "Tender, sweaty and unnervingly specific. The Mashing Hour proves generated cinema can hold a small human beat without blinking.",
+      "The rare generated short that refuses to show off. Fennimore spends her entire budget on stillness, and the eleven-cut structure turns a gimmick premise into an actual grief film. Two curators independently flagged the same shot, minute nine, as the best frame we logged this year.",
     tools: ["Lumenwave 3", "Grainsmith", "Chorusbox Audio"],
     posterHue: 74,
-    posterMotif: "eclipse",
+    posterMotif: "steamkitchen",
+    artNote: "backlit figure, steam window, service-hatch grid",
+    editorNote: "Picked for the eleven-cut edit: no other entry trusts a held shot this much.",
+    sampleNote:
+      "Illustrative sample only. The stage below renders a fictional 14-minute short as motion-free key art rather than video.",
+    editorsPick: true,
   },
   {
     slug: "starch-noir",
@@ -128,19 +133,24 @@ export const films: Film[] = [
     format: "Short Film",
     genres: ["Noir", "Sci-Fi"],
     logline:
-      "A private eye who can only see in 24 frames per second hunts the client who invented him.",
+      "A private eye who perceives the world at exactly 24 frames per second takes one last case: find the client who wrote him.",
     synopsis:
-      "A fictional hard-boiled pastiche that keeps tripping over its own artifice. Rain is rendered as a deliberate glitch and every alley repeats twice, which the filmmaker claims is intentional and we choose to believe.",
+      "A fictional hard-boiled pastiche that keeps tripping over its own artifice on purpose. Rain arrives as a deliberate temporal glitch, every alley repeats twice, and the detective's voiceover starts correcting continuity errors out loud around minute six. The film is nine minutes long and roughly seven of them are excellent.",
     spudScore: 87,
     crowdCrop: 91,
     crowdVotes: 6890,
     certifiedCrispy: true,
     kernelNotes: { story: 84, visualCraft: 90, originality: 86, aiExecution: 88 },
     consensus:
-      "A confident genre exercise that wears its seams like a trench coat. Style over substance, but what a style.",
+      "Osei-Tutu weaponises the seams. The stiff synthetic line delivery reads as characterisation instead of limitation, which almost nobody manages, and the repeating alley is the best structural joke in the vault. Then the last ninety seconds explain the gag, and the score drops seven points.",
     tools: ["Tuberflow", "Kettle Upscale", "Voxpotato TTS"],
     posterHue: 28,
-    posterMotif: "tunnel",
+    posterMotif: "rainwindow",
+    artNote: "blind slats, single lamp cone, angled rain",
+    editorNote: "Picked because the artifacts are the argument, not the excuse.",
+    sampleNote:
+      "Illustrative sample only. No footage from this fictional nine-minute short is hosted here.",
+    editorsPick: true,
   },
   {
     slug: "root-cellar-lullaby",
@@ -153,19 +163,24 @@ export const films: Film[] = [
     format: "Music Video",
     genres: ["Musical", "Surreal"],
     logline:
-      "Four minutes of subterranean choir practice, sung by things that should not have throats.",
+      "One unbroken descent into a cellar where a choir of things without throats rehearses a lullaby it has almost finished writing.",
     synopsis:
-      "A fictional music video built as one descending shot. The choir was generated from an invented vocal model and then deliberately detuned by hand.",
+      "A fictional music video built as a single continuous push-in down eleven stone arches. The choir was generated from an invented vocal model and then detuned by hand, take by take, until the harmony sits a quarter-tone under comfortable. The final arch is lit by one source and it is not explained.",
     spudScore: 91,
     crowdCrop: 79,
     crowdVotes: 2115,
     certifiedCrispy: true,
     kernelNotes: { story: 78, visualCraft: 95, originality: 94, aiExecution: 90 },
     consensus:
-      "Gorgeous, gross, hypnotic. The rare generated music video that earns its uncanny edges instead of apologising for them.",
+      "Gorgeous, gross, and structurally rigorous. Vantree uses the camera move as a metronome and lets the vocal model drift against it, so the uncanny quality becomes rhythm rather than accident. Loses points only because four minutes is not enough room for the idea it opens.",
     tools: ["Mudlark Diffusion", "Chorusbox Audio", "Grainsmith"],
     posterHue: 96,
-    posterMotif: "strata",
+    posterMotif: "descent",
+    artNote: "receding arches, single light at the bottom",
+    editorNote: "Picked for the manual detuning: the discomfort is authored, not emergent.",
+    sampleNote:
+      "Illustrative sample only. This fictional four-minute video exists as key art and score notes.",
+    editorsPick: true,
   },
   {
     slug: "peeler",
@@ -178,19 +193,24 @@ export const films: Film[] = [
     format: "Short Film",
     genres: ["Horror"],
     logline:
-      "A skincare influencer's new resurfacing routine works. It keeps working after she asks it to stop.",
+      "A skincare influencer's resurfacing routine works exactly as promised, and then keeps working long after she asks it, then begs it, to stop.",
     synopsis:
-      "A fictional body-horror piece staged almost entirely in vertical video, then reframed for the screen. Practical prosthetic references were used to steer the generated close-ups.",
+      "A fictional body-horror piece staged almost entirely in vertical capture, reframed for the screen so the letterbox itself feels like a symptom. Practical prosthetic references steered the generated close-ups, which is why the mirror sequence at minute fourteen lands and the closing voiceover does not.",
     spudScore: 76,
     crowdCrop: 94,
     crowdVotes: 12400,
     certifiedCrispy: true,
     kernelNotes: { story: 70, visualCraft: 82, originality: 74, aiExecution: 79 },
     consensus:
-      "Crowd-pleasing nastiness with one truly unforgettable mirror sequence, dragged down by a final act that explains itself to death.",
+      "One genuinely unforgettable mirror sequence, then four minutes of a film explaining what the mirror already said. The eighteen-point gap between our score and the Crowd Crop is the widest in the vault, and we are publishing both because the crowd is not wrong about the scare.",
     tools: ["Lumenwave 3", "Kettle Upscale"],
     posterHue: 12,
-    posterMotif: "orbit",
+    posterMotif: "mirrorface",
+    artNote: "split mirror, concentric peel rings",
+    editorNote: "Widest score gap on the site: read our notes and the Crowd Crop together.",
+    sampleNote:
+      "Illustrative sample only. Nothing from this fictional 22-minute short is streamed here.",
+    editorsPick: false,
   },
   {
     slug: "eleven-fields-of-static",
@@ -203,19 +223,24 @@ export const films: Film[] = [
     format: "Experimental",
     genres: ["Surreal", "Drama"],
     logline:
-      "Eleven unbroken takes of a wheat field being remembered slightly wrong each time.",
+      "The same wheat field, remembered eleven times, each pass a little more wrong than the last until the field starts arguing back.",
     synopsis:
-      "A fictional long-form experiment in model drift. Each pass through the same prompt degrades further, until the field becomes an argument.",
+      "A fictional endurance piece in eleven unbroken takes from an identical prompt. Nothing is corrected between passes. By the eighth the horizon has developed a second horizon; by the eleventh the wind is audible in a field that no longer has grain in it.",
     spudScore: 82,
     crowdCrop: 58,
     crowdVotes: 940,
     certifiedCrispy: false,
     kernelNotes: { story: 66, visualCraft: 88, originality: 96, aiExecution: 84 },
     consensus:
-      "Demanding, patient, occasionally insufferable, and the most honest film about generative decay we have seen this year.",
+      "Demanding, patient, and occasionally insufferable, with the highest originality mark we have awarded. Three of the eleven passes exist mainly to pad the runtime, and the eighth is the most honest thing anyone has shot about generative decay.",
     tools: ["Mudlark Diffusion", "Grainsmith"],
     posterHue: 55,
-    posterMotif: "static",
+    posterMotif: "moonharvest",
+    artNote: "hard horizon, oversized low moon, drifting scanlines",
+    editorNote: "Highest originality mark in the vault, and the hardest sit. Start at pass eight.",
+    sampleNote:
+      "Illustrative sample only. This fictional 31-minute experiment is represented by key art alone.",
+    editorsPick: true,
   },
   {
     slug: "tuber-2-the-reckoning",
@@ -228,19 +253,23 @@ export const films: Film[] = [
     format: "Trailer",
     genres: ["Comedy", "Fantasy"],
     logline:
-      "A fake sequel trailer for a film that never existed, complete with a fake box-office record.",
+      "A sequel trailer for a blockbuster that never existed, quoting a box-office record that never happened, with a release date that never comes.",
     synopsis:
-      "A fictional two-minute joke delivered with the budget confidence of a summer tentpole. Every credit in it is invented, including the studio.",
+      "A fictional two-minute joke delivered with the unearned confidence of a summer tentpole spot. Every credit is invented, including the studio, the composer, and the pull quote from a critic who is also invented.",
     spudScore: 68,
     crowdCrop: 86,
     crowdVotes: 15320,
     certifiedCrispy: false,
     kernelNotes: { story: 58, visualCraft: 74, originality: 62, aiExecution: 80 },
     consensus:
-      "One perfect gag stretched across two minutes. Funny, disposable, and engineered for the repost economy.",
+      "The grammar of a tentpole spot cloned beat for beat, which is genuinely impressive for about forty seconds. After the punchline lands there is another eighty seconds of trailer, and the collective clearly could not bear to cut any of it.",
     tools: ["Tuberflow", "Voxpotato TTS", "Kettle Upscale"],
     posterHue: 44,
     posterMotif: "grid",
+    artNote: "billing-block grid, fake studio bumper",
+    editorNote: "Best technical mimicry of trailer grammar on the site. Watch the first forty seconds.",
+    sampleNote: "Illustrative sample only. There is no film, no sequel, and no trailer footage here.",
+    editorsPick: false,
   },
   {
     slug: "how-we-faked-the-moon-harvest",
@@ -253,19 +282,24 @@ export const films: Film[] = [
     format: "Documentary",
     genres: ["Drama", "Sci-Fi"],
     logline:
-      "An invented oral history of the fictional crew who generated the first feature-length crop opera.",
+      "An invented oral history of the invented crew who generated the first feature-length crop opera, told by performers the film credits as synthetic on screen.",
     synopsis:
-      "A mockumentary that plays entirely straight. Talking heads are generated performers credited as such in the film's own disclosure card, which we appreciate more than we expected.",
+      "A mockumentary that plays entirely straight for forty-seven minutes. Talking heads are generated performers, disclosed as such in a transparency card that the film then rhymes with, cuts back to, and finally uses as its closing beat.",
     spudScore: 89,
     crowdCrop: 72,
     crowdVotes: 1780,
     certifiedCrispy: true,
     kernelNotes: { story: 91, visualCraft: 80, originality: 88, aiExecution: 86 },
     consensus:
-      "A sly, generous fake history that treats disclosure as a storytelling device rather than a legal footnote.",
+      "The best-written thing in the vault and the only entry that turns its own disclosure card into dramaturgy. Ellowin's fake history is generous to its fake crew, and the closing return to the credits block reframes the whole film. Craft marks lag the writing.",
     tools: ["Lumenwave 3", "Voxpotato TTS", "Chorusbox Audio", "Grainsmith"],
     posterHue: 86,
     posterMotif: "strata",
+    artNote: "archival strata, ruled ledger lines",
+    editorNote: "Picked for using disclosure as a story device instead of a legal footnote.",
+    sampleNote:
+      "Illustrative sample only. This fictional 47-minute documentary is not hosted or streamed.",
+    editorsPick: true,
   },
   {
     slug: "gravy-season",
@@ -278,19 +312,23 @@ export const films: Film[] = [
     format: "Short Film",
     genres: ["Comedy", "Drama"],
     logline:
-      "Two estranged brothers cater a funeral for a man neither of them can quite remember.",
+      "Two estranged brothers cater a funeral for a man neither can quite remember, and neither will admit it first.",
     synopsis:
-      "A fictional chamber comedy with unusually restrained coverage. Notable for keeping generated faces in mid-shot long enough to actually act.",
+      "A fictional chamber comedy with unusually restrained coverage: four setups, no inserts, and a script that lets the silences do the accusing. Notable for holding generated faces in mid-shot long enough for them to actually act.",
     spudScore: 84,
     crowdCrop: 81,
     crowdVotes: 3260,
     certifiedCrispy: true,
     kernelNotes: { story: 88, visualCraft: 78, originality: 76, aiExecution: 85 },
     consensus:
-      "Warm, well-written and refreshingly unimpressed with its own technology. The dialogue does the heavy lifting.",
+      "Warm, sharply written, and refreshingly unimpressed with its own technology. Four setups and one very good pause do more work than most entries manage with a full generated toolkit.",
     tools: ["Halcyon Motion", "Voxpotato TTS"],
     posterHue: 66,
     posterMotif: "eclipse",
+    artNote: "warm eclipse, banquet-hall glow",
+    editorNote: "Best dialogue on the site. Four setups, zero showing off.",
+    sampleNote: "Illustrative sample only. No footage of this fictional short is available here.",
+    editorsPick: false,
   },
   {
     slug: "night-shift-at-the-render-farm",
@@ -303,19 +341,23 @@ export const films: Film[] = [
     format: "Short Film",
     genres: ["Horror", "Noir"],
     logline:
-      "A janitor at a render farm keeps finding footage of tomorrow in the discard bin.",
+      "A janitor on the graveyard shift keeps pulling tomorrow's footage out of the discard bin, and tomorrow keeps getting closer.",
     synopsis:
-      "A fictional slow-burn shot in near-total darkness, lit almost exclusively by generated monitor glow. The final reveal is a single unmoving frame.",
+      "A fictional slow burn shot in near-total darkness, lit almost exclusively by generated monitor glow. The reveal is a single unmoving frame held for nineteen seconds, and it is the best still image we logged in 2026.",
     spudScore: 79,
     crowdCrop: 84,
     crowdVotes: 5030,
     certifiedCrispy: false,
     kernelNotes: { story: 76, visualCraft: 86, originality: 72, aiExecution: 81 },
     consensus:
-      "Atmosphere for days and a genuinely great last frame, even if the middle stretch coasts on vibes.",
+      "Adeyemi builds a genuinely oppressive dark and then coasts through the middle four minutes on atmosphere alone. Stay anyway: the final held frame earns back most of what the second act loses.",
     tools: ["Halcyon Motion", "Mudlark Diffusion", "Grainsmith"],
     posterHue: 20,
     posterMotif: "tunnel",
+    artNote: "monitor glow, server corridor",
+    editorNote: "Sags in the middle, lands the best final frame of the year. Worth the sag.",
+    sampleNote: "Illustrative sample only. This fictional 11-minute short is not streamed here.",
+    editorsPick: false,
   },
   {
     slug: "sprout-theory",
@@ -328,21 +370,26 @@ export const films: Film[] = [
     format: "Experimental",
     genres: ["Fantasy", "Surreal"],
     logline:
-      "A seed is interviewed about its plans. The seed declines to answer.",
+      "A seed sits for a formal interview about its long-term plans. The seed declines to answer, for five minutes, beautifully.",
     synopsis:
-      "Five minutes of fictional deadpan absurdity, rendered in a soft handmade palette with visible brush-like artifacts left deliberately intact.",
+      "Five minutes of fictional deadpan absurdity rendered in a soft handmade palette, with brush-like artifacts left deliberately intact because cleaning them up would have cost the joke.",
     spudScore: 72,
     crowdCrop: 66,
     crowdVotes: 620,
     certifiedCrispy: false,
     kernelNotes: { story: 62, visualCraft: 84, originality: 82, aiExecution: 70 },
     consensus:
-      "A charming shrug of a film. Slight by design, but the palette alone justifies the five minutes.",
+      "A charming shrug of a film, slight by design and honest about it. The palette alone justifies the five minutes, and the refusal to punch up the joke is its own kind of discipline.",
     tools: ["Mudlark Diffusion", "Kettle Upscale"],
     posterHue: 108,
     posterMotif: "orbit",
+    artNote: "soft orbit, handmade brush artifacts",
+    editorNote: "Smallest idea here, executed with the most restraint.",
+    sampleNote: "Illustrative sample only. No video for this fictional short is hosted.",
+    editorsPick: false,
   },
 ];
+
 
 export type Reviewer = {
   id: string;
