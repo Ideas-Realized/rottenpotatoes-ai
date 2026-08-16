@@ -7,6 +7,7 @@ import { PosterArt } from "@/components/PosterArt";
 import { ScoreMeter, SpudScore } from "@/components/SpudScore";
 import { Button } from "@/components/ui/button";
 import { categories, editorials, films } from "@/data/films";
+import { SITE_URL } from "@/lib/site";
 
 const TITLE = "Rotten Potatoes — AI cinema has entered the chat";
 const DESCRIPTION =
