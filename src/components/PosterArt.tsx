@@ -13,6 +13,8 @@ type Props = {
   className?: string;
   /** Hides the big title lockup (used inside small cards). */
   compact?: boolean;
+  /** Removes all typography so a parent composition can provide a separate caption. */
+  showLockup?: boolean;
   /** Adds the credit block + art-direction caption for hero placements. */
   showCredit?: boolean;
 };
@@ -26,7 +28,13 @@ type Layer = { style: CSSProperties; className?: string };
  * while sharing one art direction: charcoal ground, gold key light,
  * halftone grain, vignette, and a typographic lockup.
  */
-export function PosterArt({ film, className, compact = false, showCredit = false }: Props) {
+export function PosterArt({
+  film,
+  className,
+  compact = false,
+  showLockup = true,
+  showCredit = false,
+}: Props) {
   const h = film.posterHue;
   const ink = `oklch(0.13 0.012 ${h})`;
   const base = `oklch(0.2 0.026 ${h})`;
@@ -324,22 +332,24 @@ export function PosterArt({ film, className, compact = false, showCredit = false
         aria-hidden="true"
       />
 
-      <div className="relative z-10 flex h-full flex-col justify-end gap-1 p-3 sm:p-4">
-        <p className="font-mono text-[0.55rem] tracking-[0.28em] text-gold/85">
-          {film.format.toUpperCase()} / {film.year} / {film.runtimeMin}MIN
-        </p>
-        {!compact && (
-          <p className="font-display text-2xl leading-[0.88] text-foreground drop-shadow-[0_2px_10px_oklch(0_0_0/0.85)] sm:text-4xl">
-            {film.title}
+      {showLockup && (
+        <div className="relative z-10 flex h-full flex-col justify-end gap-1 p-3 sm:p-4">
+          <p className="font-mono text-[0.55rem] tracking-[0.28em] text-gold/85">
+            {film.format.toUpperCase()} / {film.year} / {film.runtimeMin}MIN
           </p>
-        )}
-        {showCredit && (
-          <p className="mt-1 hidden max-w-[38ch] font-mono text-[0.55rem] uppercase leading-relaxed tracking-[0.16em] text-muted-foreground sm:block">
-            {film.creator ? `A fictional work by ${film.creator}` : "Fictional work"}
-            {film.artNote ? ` · Key art: ${film.artNote}` : ""}
-          </p>
-        )}
-      </div>
+          {!compact && (
+            <p className="font-display text-2xl leading-[0.88] text-foreground drop-shadow-[0_2px_10px_oklch(0_0_0/0.85)] sm:text-4xl">
+              {film.title}
+            </p>
+          )}
+          {showCredit && (
+            <p className="mt-1 hidden max-w-[38ch] font-mono text-[0.55rem] uppercase leading-relaxed tracking-[0.16em] text-muted-foreground sm:block">
+              {film.creator ? `A fictional work by ${film.creator}` : "Fictional work"}
+              {film.artNote ? ` · Key art: ${film.artNote}` : ""}
+            </p>
+          )}
+        </div>
+      )}
     </div>
   );
 }

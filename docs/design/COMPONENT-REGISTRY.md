@@ -4,15 +4,16 @@ Factual inventory of shared code. Reuse before extending; extend before creating
 
 ## Rotten Potatoes vertical slice (`src/components`)
 
-| Component | File | Purpose |
-| --- | --- | --- |
-| `SiteHeader`, `Newsletter`, `SiteFooter` | `SiteChrome.tsx` | Sticky nav with mobile disclosure, UI-only newsletter block, footer index and fictional-demo disclosure |
-| `FilmCard`, `SaveButton` | `FilmCard.tsx` | Standard film tile: poster, Spud Score, Certified Crispy / Editor's pick flags, "why we chose it" note, save toggle |
-| `PosterArt` | `PosterArt.tsx` | CSS-generated key art motifs with scanlines, vignette, gold frame; `compact` and `showCredit` variants |
-| `TrailerStage` | `TrailerStage.tsx` | Letterboxed watch stage with illustrative/fictional placeholder state and runtime treatment |
-| `ReviewCard`, `ReviewerAvatar` | `ReviewCard.tsx` | Review spread with reviewer identity, pull quote, verdict |
-| `SpudScore`, `SpudGlyph`, `ScoreMeter` | `SpudScore.tsx` | Score badge tiers, potato glyph, Kernel Notes meters |
-| `WatchlistProvider`, `useWatchlist` | `watchlist.tsx` | Demo-only localStorage watchlist context |
+| Component                                | File                | Purpose                                                                                                               |
+| ---------------------------------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `SiteHeader`, `Newsletter`, `SiteFooter` | `SiteChrome.tsx`    | Sticky nav with mobile disclosure, UI-only newsletter block, footer index and fictional-demo disclosure               |
+| `FilmCard`, `SaveButton`                 | `FilmCard.tsx`      | Standard film tile: poster, Spud Score, Certified Crispy / Editor's pick flags, "why we chose it" note, save toggle   |
+| `CinematicHero`                          | `CinematicHero.tsx` | Home-page editorial hero with separate key-art captioning, pointer-responsive depth, and reduced-motion behavior      |
+| `PosterArt`                              | `PosterArt.tsx`     | CSS-generated key art motifs with scanlines, vignette, gold frame; `compact`, `showLockup`, and `showCredit` variants |
+| `TrailerStage`                           | `TrailerStage.tsx`  | Letterboxed watch stage with illustrative/fictional placeholder state and runtime treatment                           |
+| `ReviewCard`, `ReviewerAvatar`           | `ReviewCard.tsx`    | Review spread with reviewer identity, pull quote, verdict                                                             |
+| `SpudScore`, `SpudGlyph`, `ScoreMeter`   | `SpudScore.tsx`     | Score badge tiers, potato glyph, Kernel Notes meters                                                                  |
+| `WatchlistProvider`, `useWatchlist`      | `watchlist.tsx`     | Demo-only localStorage watchlist context                                                                              |
 
 Data and helpers live in `src/data/films.ts` (`films`, `reviewers`, `reviews`,
 `getFilm`, `getReviewer`, `scoreTier`, `editorialOrder`, `editorsPicks`).

@@ -1,17 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Clock, Film, Sparkles } from "lucide-react";
 
+import { CinematicHero } from "@/components/CinematicHero";
 import { FilmCard, SaveButton } from "@/components/FilmCard";
 import { Newsletter } from "@/components/SiteChrome";
-import { PosterArt } from "@/components/PosterArt";
 import { ScoreMeter, SpudScore } from "@/components/SpudScore";
 import { Button } from "@/components/ui/button";
 import { categories, editorials, films } from "@/data/films";
 import { SITE_URL } from "@/lib/site";
 
-const TITLE = "Rotten Potatoes — AI cinema has entered the chat";
+const TITLE = "Rotten Potatoes — Not every prompt deserves a premiere";
 const DESCRIPTION =
-  "A fictional demo review destination for AI-generated short films, trailers and experiments. Sample Spud Scores, curators and toolchains are invented.";
+  "A fictional cult-cinema review desk for generated shorts, trailers and experiments. Sample Spud Scores, curators and toolchains are invented.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -38,74 +38,11 @@ function Home() {
 
   return (
     <>
-      {/* HERO */}
-      <section className="spotlight relative overflow-hidden border-b border-border/70">
-        <div className="halftone absolute inset-0 opacity-[0.12]" aria-hidden="true" />
-        <div className="mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:py-28">
-          <div className="relative">
-            <p className="eyebrow">Est. 2026 · Reviews from the render farm</p>
-            <h1 className="mt-5 text-5xl leading-[0.86] sm:text-7xl xl:text-8xl">
-              AI cinema has <span className="text-gradient-gold">entered the chat.</span>
-            </h1>
-            <p className="mt-6 max-w-xl text-base text-muted-foreground sm:text-lg">
-              We watch the generated stuff so you don't have to watch all of it. Curated Spud
-              Scores, Kernel Notes on craft, and a full toolchain breakdown for every fictional film
-              in the vault.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild variant="crispy" size="lg">
-                <Link to="/discover">
-                  Browse Films <ArrowRight className="size-4" />
-                </Link>
-              </Button>
-              <Button asChild variant="rind" size="lg">
-                <Link to="/submit">Submit a Film</Link>
-              </Button>
-            </div>
-            <dl className="mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-gold/25 pt-6">
-              {[
-                { k: "Films logged", v: films.length },
-                { k: "Curators", v: 5 },
-                { k: "Certified Crispy", v: films.filter((f) => f.certifiedCrispy).length },
-              ].map((s) => (
-                <div key={s.k}>
-                  <dt className="font-mono text-[0.6rem] uppercase tracking-[0.18em] text-muted-foreground">
-                    {s.k}
-                  </dt>
-                  <dd className="font-display text-3xl text-gold">{s.v}</dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-
-          <div className="relative">
-            <div className="film-edge overflow-hidden rounded-lg border border-gold/25 bg-surface p-3 shadow-[var(--shadow-frame)]">
-              <PosterArt film={featured} className="aspect-[3/4] w-full" compact showCredit />
-            </div>
-            <div className="mt-3 rounded-md border border-gold/40 bg-background/95 p-4 backdrop-blur sm:absolute sm:bottom-5 sm:left-5 sm:right-5 sm:mt-0">
-              <p className="eyebrow">Now on the marquee</p>
-              <p className="mt-1 font-display text-lg leading-tight sm:text-xl">{featured.title}</p>
-              <p className="mt-1 text-xs text-muted-foreground">
-                {featured.creator} · {featured.runtimeMin} min
-              </p>
-              <p className="mt-2 line-clamp-2 text-[0.7rem] leading-snug text-foreground/75">
-                {featured.editorNote}
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* marquee ticker */}
-        <div className="overflow-hidden border-t border-gold/25 bg-gold/10 py-2">
-          <div className="marquee-track gap-8 font-mono text-[0.7rem] uppercase tracking-[0.24em] text-gold">
-            {[...films, ...films].map((f, i) => (
-              <span key={`${f.slug}-${i}`} className="whitespace-nowrap">
-                {f.title} — {f.spudScore} ·
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
+      <CinematicHero
+        featured={featured}
+        filmCount={films.length}
+        crispyCount={films.filter((film) => film.certifiedCrispy).length}
+      />
 
       {/* FEATURED FILM OF THE WEEK */}
       <section aria-labelledby="featured-heading" className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
